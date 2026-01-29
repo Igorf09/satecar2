@@ -1,5 +1,5 @@
 import { Network, Wallet, Clock, Download } from "lucide-react";
-import robotImage from "@/assets/robot-navy-bg.png";
+import robotImage from "@/assets/robot-satecar-clean.png";
 
 const services = [
   {
@@ -26,46 +26,47 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-br from-[#1a3a5c] via-[#1e4a6e] to-[#1a3a5c] relative overflow-hidden">
+    <section className="py-16 md:py-24 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #1a4a6e 0%, #2a6a8e 50%, #1a5a7e 100%)' }}>
       {/* Background with truck silhouette effect */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-gradient-to-r from-transparent via-[#2a5a7e]/30 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 opacity-15">
+        <div 
+          className="absolute top-1/2 left-1/3 -translate-y-1/2 w-[600px] h-[400px]"
+          style={{
+            background: 'radial-gradient(ellipse, rgba(20,40,60,0.8) 0%, transparent 70%)',
+          }}
+        />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-5 gap-8 items-center">
-          {/* Cards Grid - Left Side (takes 3 columns) */}
-          <div className="lg:col-span-3 grid sm:grid-cols-2 gap-5">
+        <div className="grid lg:grid-cols-12 gap-6 items-center">
+          {/* Cards Grid - Left Side */}
+          <div className="lg:col-span-6 grid sm:grid-cols-2 gap-4">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group bg-[#0d2847]/70 backdrop-blur-sm rounded-3xl p-6 border border-[#2a5a7e]/40 
-                           hover:border-cyan-400/50 hover:bg-[#0d2847]/90
+                className="group bg-[#0d3555]/60 backdrop-blur-sm rounded-3xl p-5 border border-[#1a5577]/30 
+                           hover:border-cyan-400/40 hover:bg-[#0d3555]/80
                            transition-all duration-300"
               >
                 {/* Icon - Circle with border */}
-                <div className="w-14 h-14 mb-5 rounded-full border-2 border-cyan-400/60 flex items-center justify-center
-                              group-hover:border-cyan-300 transition-colors duration-300">
-                  <service.icon className="w-6 h-6 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300" />
+                <div className="w-12 h-12 mb-4 rounded-full border-2 border-cyan-400/50 flex items-center justify-center
+                              bg-transparent group-hover:border-cyan-300 transition-colors duration-300">
+                  <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300" />
                 </div>
                 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
-                <p className="text-gray-300/80 text-sm leading-relaxed">{service.description}</p>
+                <h3 className="text-lg font-bold text-white mb-1">{service.title}</h3>
+                <p className="text-gray-300/70 text-sm leading-relaxed">{service.description}</p>
               </div>
             ))}
           </div>
 
-          {/* Robot Image - Right Side (takes 2 columns) */}
-          <div className="lg:col-span-2 flex justify-center lg:justify-end relative">
-            {/* Glow effect behind robot */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl"></div>
-            
-            {/* Robot Image - Large and positioned to overlap */}
+          {/* Robot Image - Right Side - Positioned to overflow */}
+          <div className="lg:col-span-6 relative h-[400px] md:h-[500px] lg:h-[600px]">
             <img 
               src={robotImage} 
               alt="Robô Satecar - Rastreamento inteligente" 
-              className="relative z-10 w-[280px] h-[280px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] object-contain drop-shadow-2xl"
+              className="absolute top-0 right-0 lg:-right-20 xl:-right-32 w-[350px] h-[350px] md:w-[500px] md:h-[500px] lg:w-[650px] lg:h-[650px] object-contain"
             />
           </div>
         </div>
