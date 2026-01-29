@@ -1,5 +1,5 @@
 import { Network, Wallet, Clock, Download } from "lucide-react";
-import robotImage from "@/assets/robot-satecar-clean.png";
+import robotImage from "@/assets/robot-transparent.png";
 
 const services = [
   {
