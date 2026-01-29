@@ -65,7 +65,7 @@ const StatsSection = () => {
   return (
     <section className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
-        <h2 className="section-title text-center mb-12">Satecar em 2023</h2>
+        <h2 className="section-title text-center mb-12">Satecar em 2026</h2>
         
         <div className="grid md:grid-cols-3 gap-8 md:gap-12">
           <StatCounter
