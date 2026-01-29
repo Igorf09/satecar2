@@ -2,87 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Satecar Brand Colors */
+    --background: 210 20% 98%;
+    --foreground: 210 30% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 210 30% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 210 30% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary: Navy Blue from Satecar */
+    --primary: 208 55% 20%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary: Light Blue accent */
+    --secondary: 197 71% 52%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 210 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 197 71% 52%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 208 55% 20%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom Satecar tokens */
+    --navy: 208 55% 20%;
+    --navy-dark: 208 60% 12%;
+    --blue-accent: 197 71% 52%;
+    --blue-light: 197 80% 95%;
+    --gray-bg: 210 20% 98%;
+    --text-dark: 210 30% 15%;
+    --text-muted: 210 15% 45%;
+    --whatsapp: 142 70% 45%;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
+    --background: 210 30% 8%;
+    --foreground: 210 20% 98%;
+    --card: 210 30% 12%;
+    --card-foreground: 210 20% 98%;
+    --popover: 210 30% 12%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 197 71% 52%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 208 55% 25%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 210 30% 18%;
+    --muted-foreground: 210 15% 65%;
+    --accent: 197 71% 52%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 210 30% 20%;
+    --input: 210 30% 20%;
+    --ring: 197 71% 52%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -99,7 +95,111 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
-  body {
-    @apply bg-background text-foreground;
+  html {
+    scroll-behavior: smooth;
   }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-televendas {
+    @apply bg-primary text-primary-foreground px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 hover:opacity-90 shadow-md;
+  }
+
+  .btn-store {
+    @apply bg-primary text-primary-foreground px-8 py-3 rounded-full font-medium text-base transition-all duration-300 hover:opacity-90;
+  }
+
+  .btn-contract {
+    @apply bg-secondary text-secondary-foreground px-8 py-3 rounded-full font-semibold text-base transition-all duration-300 hover:opacity-90 w-full;
+  }
+
+  .social-icon {
+    @apply w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300;
+  }
+
+  .social-icon-instagram {
+    @apply social-icon bg-[hsl(var(--blue-accent))] text-white hover:opacity-80;
+  }
+
+  .social-icon-whatsapp {
+    @apply social-icon bg-[hsl(var(--blue-light))] text-[hsl(var(--blue-accent))] hover:opacity-80;
+  }
+
+  .section-title {
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold text-[hsl(var(--navy))] mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-base md:text-lg text-[hsl(var(--text-muted))] leading-relaxed;
+  }
+
+  .stat-number {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-[hsl(var(--blue-accent))];
+  }
+
+  .stat-label {
+    @apply text-sm md:text-base text-[hsl(var(--text-muted))] mt-2;
+  }
+
+  .plan-card {
+    @apply bg-card rounded-3xl p-6 md:p-8 shadow-xl border border-border transition-all duration-300 hover:shadow-2xl;
+  }
+
+  .plan-title {
+    @apply text-xl md:text-2xl font-bold text-[hsl(var(--navy))] mb-2;
+  }
+
+  .plan-price {
+    @apply text-2xl md:text-3xl font-bold text-[hsl(var(--navy))];
+  }
+
+  .plan-feature {
+    @apply flex items-center gap-3 text-sm md:text-base text-[hsl(var(--text-dark))] py-1;
+  }
+
+  .service-card {
+    @apply bg-card rounded-3xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl;
+  }
+
+  .whatsapp-float {
+    @apply fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg cursor-pointer transition-all duration-300 hover:scale-110;
+  }
+
+  .chatbot-widget {
+    @apply fixed bottom-24 right-6 z-50 bg-card rounded-2xl shadow-2xl w-80 overflow-hidden border border-border;
+  }
+
+  .chatbot-header {
+    @apply bg-[hsl(var(--navy))] text-white p-4 flex items-center gap-3;
+  }
+
+  .chatbot-option {
+    @apply w-full text-left px-4 py-3 text-sm bg-[hsl(var(--blue-light))] text-[hsl(var(--navy))] rounded-xl hover:bg-[hsl(var(--blue-accent))] hover:text-white transition-all duration-300 font-medium;
+  }
+}
+
+/* Counter animation */
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-count-up {
+  animation: countUp 0.6s ease-out forwards;
+}
+
+/* Smooth scroll offset for fixed header */
+section[id] {
+  scroll-margin-top: 100px;
 }
