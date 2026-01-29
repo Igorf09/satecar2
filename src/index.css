@@ -6,88 +6,88 @@
 
 @layer base {
   :root {
-    /* Satecar Brand Colors - Navy Blue Predominant */
-    --background: 208 55% 15%;
+    /* Satecar Brand Colors - Petroleum Blue (Azul Petróleo) */
+    --background: 192 50% 18%;
     --foreground: 0 0% 100%;
 
-    --card: 208 55% 18%;
+    --card: 192 50% 22%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 208 55% 18%;
+    --popover: 192 50% 22%;
     --popover-foreground: 0 0% 100%;
 
-    /* Primary: Light Blue accent */
-    --primary: 197 71% 52%;
+    /* Primary: Teal/Cyan accent */
+    --primary: 187 65% 48%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary: Slightly lighter navy */
-    --secondary: 208 50% 25%;
+    /* Secondary: Slightly lighter petroleum */
+    --secondary: 192 45% 28%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 208 45% 22%;
-    --muted-foreground: 210 20% 75%;
+    --muted: 192 40% 25%;
+    --muted-foreground: 190 20% 78%;
 
-    --accent: 197 71% 52%;
+    --accent: 187 65% 48%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 208 40% 25%;
-    --input: 208 40% 25%;
-    --ring: 197 71% 52%;
+    --border: 192 35% 30%;
+    --input: 192 35% 30%;
+    --ring: 187 65% 48%;
 
     --radius: 0.75rem;
 
     /* Custom Satecar tokens */
-    --navy: 208 55% 15%;
-    --navy-dark: 208 60% 10%;
-    --navy-light: 208 50% 22%;
-    --blue-accent: 197 71% 52%;
-    --blue-light: 197 80% 90%;
-    --gray-bg: 208 55% 12%;
+    --navy: 192 50% 18%;
+    --navy-dark: 192 55% 12%;
+    --navy-light: 192 45% 25%;
+    --blue-accent: 187 65% 48%;
+    --blue-light: 187 75% 88%;
+    --gray-bg: 192 50% 14%;
     --text-white: 0 0% 100%;
-    --text-muted: 210 20% 75%;
+    --text-muted: 190 20% 78%;
     --whatsapp: 142 70% 45%;
 
-    --sidebar-background: 208 55% 12%;
+    --sidebar-background: 192 50% 14%;
     --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 197 71% 52%;
+    --sidebar-primary: 187 65% 48%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 208 50% 20%;
+    --sidebar-accent: 192 45% 22%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 208 40% 25%;
-    --sidebar-ring: 197 71% 52%;
+    --sidebar-border: 192 35% 28%;
+    --sidebar-ring: 187 65% 48%;
   }
 
   .dark {
-    --background: 208 60% 8%;
+    --background: 192 55% 10%;
     --foreground: 0 0% 100%;
-    --card: 208 55% 12%;
+    --card: 192 50% 14%;
     --card-foreground: 0 0% 100%;
-    --popover: 208 55% 12%;
+    --popover: 192 50% 14%;
     --popover-foreground: 0 0% 100%;
-    --primary: 197 71% 52%;
+    --primary: 187 65% 48%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 208 55% 18%;
+    --secondary: 192 50% 20%;
     --secondary-foreground: 0 0% 100%;
-    --muted: 208 50% 18%;
-    --muted-foreground: 210 15% 70%;
-    --accent: 197 71% 52%;
+    --muted: 192 45% 18%;
+    --muted-foreground: 190 15% 72%;
+    --accent: 187 65% 48%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
-    --border: 208 40% 22%;
-    --input: 208 40% 22%;
-    --ring: 197 71% 52%;
-    --sidebar-background: 208 60% 8%;
+    --border: 192 35% 24%;
+    --input: 192 35% 24%;
+    --ring: 187 65% 48%;
+    --sidebar-background: 192 55% 10%;
     --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 197 71% 52%;
+    --sidebar-primary: 187 65% 48%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 208 50% 15%;
+    --sidebar-accent: 192 45% 16%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 208 40% 20%;
-    --sidebar-ring: 197 71% 52%;
+    --sidebar-border: 192 35% 22%;
+    --sidebar-ring: 187 65% 48%;
   }
 }
 
