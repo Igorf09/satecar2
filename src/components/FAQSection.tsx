@@ -26,7 +26,7 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <section id="duvidas" className="py-16 md:py-24 bg-secondary">
+    <section id="duvidas" className="py-16 md:py-24 bg-muted">
       <div className="container mx-auto px-4">
         <h2 className="section-title text-center mb-12">Dúvidas Frequentes</h2>
 
