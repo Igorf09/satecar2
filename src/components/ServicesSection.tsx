@@ -1,5 +1,5 @@
 import { Truck, DollarSign, Clock, Wrench } from "lucide-react";
-import robotImage from "@/assets/robot-mascot.png";
+import robotImage from "@/assets/robot-satecar.png";
 
 const services = [
   {
