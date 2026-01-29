@@ -17,7 +17,7 @@ const BenefitsSection = () => {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-border"
             >
               <img
                 src={benefit.image}

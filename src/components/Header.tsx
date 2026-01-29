@@ -25,7 +25,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -46,7 +46,7 @@ const Header = () => {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-foreground font-medium hover:text-blue-accent transition-colors"
+                  className="text-foreground font-medium hover:text-primary transition-colors"
                 >
                   {item.label}
                 </a>
@@ -54,7 +54,7 @@ const Header = () => {
                 <button
                   key={item.label}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-foreground font-medium hover:text-blue-accent transition-colors"
+                  className="text-foreground font-medium hover:text-primary transition-colors"
                 >
                   {item.label}
                 </button>
@@ -98,7 +98,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2"
+            className="lg:hidden p-2 text-foreground"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Menu"
           >
@@ -117,7 +117,7 @@ const Header = () => {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-foreground font-medium py-2 hover:text-blue-accent transition-colors"
+                    className="text-foreground font-medium py-2 hover:text-primary transition-colors"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.label}
@@ -126,7 +126,7 @@ const Header = () => {
                   <button
                     key={item.label}
                     onClick={() => scrollToSection(item.href)}
-                    className="text-foreground font-medium py-2 hover:text-blue-accent transition-colors text-left"
+                    className="text-foreground font-medium py-2 hover:text-primary transition-colors text-left"
                   >
                     {item.label}
                   </button>

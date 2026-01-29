@@ -101,7 +101,7 @@ const plans: Plan[] = [
 
 const PlansSection = () => {
   return (
-    <section id="planos" className="py-16 md:py-24 bg-muted">
+    <section id="planos" className="py-16 md:py-24 bg-secondary">
       <div className="container mx-auto px-4">
         <h2 className="section-title text-center mb-12">Nossos Planos</h2>
 
@@ -117,7 +117,7 @@ const PlansSection = () => {
                 {plan.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="plan-feature">
                     {feature.included ? (
-                      <Check className="w-5 h-5 text-[hsl(142,70%,45%)] flex-shrink-0" />
+                      <Check className="w-5 h-5 text-primary flex-shrink-0" />
                     ) : (
                       <X className="w-5 h-5 text-destructive flex-shrink-0" />
                     )}

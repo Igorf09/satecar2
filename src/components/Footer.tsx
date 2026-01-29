@@ -5,7 +5,7 @@ const INSTAGRAM_LINK = "https://www.instagram.com/satecar_rastreamentos/";
 
 const Footer = () => {
   return (
-    <footer className="bg-navy py-12">
+    <footer className="bg-card py-12 border-t border-border">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
@@ -13,26 +13,26 @@ const Footer = () => {
             <img
               src="/images/logo-satecar.png"
               alt="Satecar - Rastreamento Veicular"
-              className="h-10 w-auto brightness-0 invert"
+              className="h-10 w-auto"
             />
           </a>
 
           {/* Links */}
           <nav className="flex flex-wrap justify-center gap-6 text-sm">
-            <a href="#planos" className="text-white/80 hover:text-white transition-colors">
+            <a href="#planos" className="text-foreground/80 hover:text-primary transition-colors">
               Planos
             </a>
-            <a href="#vantagens" className="text-white/80 hover:text-white transition-colors">
+            <a href="#vantagens" className="text-foreground/80 hover:text-primary transition-colors">
               Vantagens
             </a>
-            <a href="#duvidas" className="text-white/80 hover:text-white transition-colors">
+            <a href="#duvidas" className="text-foreground/80 hover:text-primary transition-colors">
               Dúvidas
             </a>
             <a
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/80 hover:text-white transition-colors"
+              className="text-foreground/80 hover:text-primary transition-colors"
             >
               Contato
             </a>
@@ -44,7 +44,7 @@ const Footer = () => {
               href={INSTAGRAM_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+              className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
               aria-label="Instagram"
             >
               <Instagram size={20} />
@@ -53,7 +53,7 @@ const Footer = () => {
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+              className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
               aria-label="WhatsApp"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
@@ -64,8 +64,8 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="mt-8 pt-8 border-t border-white/10 text-center">
-          <p className="text-white/60 text-sm">
+        <div className="mt-8 pt-8 border-t border-border text-center">
+          <p className="text-muted-foreground text-sm">
             © {new Date().getFullYear()} Satecar Rastreamentos. Todos os direitos reservados.
           </p>
         </div>

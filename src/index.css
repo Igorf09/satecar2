@@ -6,87 +6,88 @@
 
 @layer base {
   :root {
-    /* Satecar Brand Colors */
-    --background: 210 20% 98%;
-    --foreground: 210 30% 15%;
+    /* Satecar Brand Colors - Navy Blue Predominant */
+    --background: 208 55% 15%;
+    --foreground: 0 0% 100%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 210 30% 15%;
+    --card: 208 55% 18%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 210 30% 15%;
+    --popover: 208 55% 18%;
+    --popover-foreground: 0 0% 100%;
 
-    /* Primary: Navy Blue from Satecar */
-    --primary: 208 55% 20%;
+    /* Primary: Light Blue accent */
+    --primary: 197 71% 52%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary: Light Blue accent */
-    --secondary: 197 71% 52%;
+    /* Secondary: Slightly lighter navy */
+    --secondary: 208 50% 25%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 20% 96%;
-    --muted-foreground: 210 15% 45%;
+    --muted: 208 45% 22%;
+    --muted-foreground: 210 20% 75%;
 
     --accent: 197 71% 52%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 90%;
-    --input: 210 20% 90%;
-    --ring: 208 55% 20%;
+    --border: 208 40% 25%;
+    --input: 208 40% 25%;
+    --ring: 197 71% 52%;
 
     --radius: 0.75rem;
 
     /* Custom Satecar tokens */
-    --navy: 208 55% 20%;
-    --navy-dark: 208 60% 12%;
+    --navy: 208 55% 15%;
+    --navy-dark: 208 60% 10%;
+    --navy-light: 208 50% 22%;
     --blue-accent: 197 71% 52%;
-    --blue-light: 197 80% 95%;
-    --gray-bg: 210 20% 98%;
-    --text-dark: 210 30% 15%;
-    --text-muted: 210 15% 45%;
+    --blue-light: 197 80% 90%;
+    --gray-bg: 208 55% 12%;
+    --text-white: 0 0% 100%;
+    --text-muted: 210 20% 75%;
     --whatsapp: 142 70% 45%;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 208 55% 12%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 197 71% 52%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 208 50% 20%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 208 40% 25%;
+    --sidebar-ring: 197 71% 52%;
   }
 
   .dark {
-    --background: 210 30% 8%;
-    --foreground: 210 20% 98%;
-    --card: 210 30% 12%;
-    --card-foreground: 210 20% 98%;
-    --popover: 210 30% 12%;
-    --popover-foreground: 210 20% 98%;
+    --background: 208 60% 8%;
+    --foreground: 0 0% 100%;
+    --card: 208 55% 12%;
+    --card-foreground: 0 0% 100%;
+    --popover: 208 55% 12%;
+    --popover-foreground: 0 0% 100%;
     --primary: 197 71% 52%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 208 55% 25%;
-    --secondary-foreground: 210 20% 98%;
-    --muted: 210 30% 18%;
-    --muted-foreground: 210 15% 65%;
+    --secondary: 208 55% 18%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 208 50% 18%;
+    --muted-foreground: 210 15% 70%;
     --accent: 197 71% 52%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 210 30% 20%;
-    --input: 210 30% 20%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 208 40% 22%;
+    --input: 208 40% 22%;
     --ring: 197 71% 52%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-background: 208 60% 8%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 197 71% 52%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 208 50% 15%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 208 40% 20%;
+    --sidebar-ring: 197 71% 52%;
   }
 }
 
@@ -115,7 +116,7 @@
   }
 
   .btn-contract {
-    @apply bg-secondary text-secondary-foreground px-8 py-3 rounded-full font-semibold text-base transition-all duration-300 hover:opacity-90 w-full;
+    @apply bg-primary text-primary-foreground px-8 py-3 rounded-full font-semibold text-base transition-all duration-300 hover:opacity-90 w-full;
   }
 
   .social-icon {
@@ -123,47 +124,47 @@
   }
 
   .social-icon-instagram {
-    @apply social-icon bg-[hsl(var(--blue-accent))] text-white hover:opacity-80;
+    @apply social-icon bg-primary text-primary-foreground hover:opacity-80;
   }
 
   .social-icon-whatsapp {
-    @apply social-icon bg-[hsl(var(--blue-light))] text-[hsl(var(--blue-accent))] hover:opacity-80;
+    @apply social-icon bg-secondary text-foreground hover:opacity-80;
   }
 
   .section-title {
-    @apply text-2xl md:text-3xl lg:text-4xl font-bold text-[hsl(var(--navy))] mb-4;
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4;
   }
 
   .section-subtitle {
-    @apply text-base md:text-lg text-[hsl(var(--text-muted))] leading-relaxed;
+    @apply text-base md:text-lg text-muted-foreground leading-relaxed;
   }
 
   .stat-number {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-[hsl(var(--blue-accent))];
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-primary;
   }
 
   .stat-label {
-    @apply text-sm md:text-base text-[hsl(var(--text-muted))] mt-2;
+    @apply text-sm md:text-base text-muted-foreground mt-2;
   }
 
   .plan-card {
-    @apply bg-card rounded-3xl p-6 md:p-8 shadow-xl border border-border transition-all duration-300 hover:shadow-2xl;
+    @apply bg-card rounded-3xl p-6 md:p-8 shadow-xl border border-border transition-all duration-300 hover:shadow-2xl hover:border-primary/50;
   }
 
   .plan-title {
-    @apply text-xl md:text-2xl font-bold text-[hsl(var(--navy))] mb-2;
+    @apply text-xl md:text-2xl font-bold text-foreground mb-2;
   }
 
   .plan-price {
-    @apply text-2xl md:text-3xl font-bold text-[hsl(var(--navy))];
+    @apply text-2xl md:text-3xl font-bold text-primary;
   }
 
   .plan-feature {
-    @apply flex items-center gap-3 text-sm md:text-base text-[hsl(var(--text-dark))] py-1;
+    @apply flex items-center gap-3 text-sm md:text-base text-foreground py-1;
   }
 
   .service-card {
-    @apply bg-card rounded-3xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl;
+    @apply bg-card rounded-3xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl border border-border;
   }
 
   .whatsapp-float {
@@ -175,11 +176,11 @@
   }
 
   .chatbot-header {
-    @apply bg-[hsl(var(--navy))] text-white p-4 flex items-center gap-3;
+    @apply bg-primary text-primary-foreground p-4 flex items-center gap-3;
   }
 
   .chatbot-option {
-    @apply w-full text-left px-4 py-3 text-sm bg-[hsl(var(--blue-light))] text-[hsl(var(--navy))] rounded-xl hover:bg-[hsl(var(--blue-accent))] hover:text-white transition-all duration-300 font-medium;
+    @apply w-full text-left px-4 py-3 text-sm bg-secondary text-foreground rounded-xl hover:bg-primary hover:text-primary-foreground transition-all duration-300 font-medium;
   }
 }
 
