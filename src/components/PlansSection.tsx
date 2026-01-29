@@ -101,7 +101,7 @@ const plans: Plan[] = [
 
 const PlansSection = () => {
   return (
-    <section id="planos" className="py-16 md:py-24 bg-secondary">
+    <section id="planos" className="py-16 md:py-24 bg-muted">
       <div className="container mx-auto px-4">
         <h2 className="section-title text-center mb-12">Nossos Planos</h2>
 

@@ -20,12 +20,12 @@
     --primary: 205 70% 55%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary: Slightly lighter navy */
-    --secondary: 220 45% 26%;
-    --secondary-foreground: 0 0% 100%;
+    /* Secondary: Grayish white for subtle elements */
+    --secondary: 220 15% 85%;
+    --secondary-foreground: 220 50% 15%;
 
     --muted: 220 40% 24%;
-    --muted-foreground: 220 20% 78%;
+    --muted-foreground: 220 10% 75%;
 
     --accent: 205 70% 55%;
     --accent-foreground: 0 0% 100%;
@@ -33,8 +33,8 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 35% 28%;
-    --input: 220 35% 28%;
+    --border: 220 20% 40%;
+    --input: 220 20% 40%;
     --ring: 205 70% 55%;
 
     --radius: 0.75rem;
@@ -47,7 +47,8 @@
     --blue-light: 205 75% 88%;
     --gray-bg: 220 50% 12%;
     --text-white: 0 0% 100%;
-    --text-muted: 220 20% 78%;
+    --text-muted: 220 10% 75%;
+    --text-gray: 220 15% 88%;
     --whatsapp: 142 70% 45%;
 
     --sidebar-background: 220 50% 12%;
@@ -56,7 +57,7 @@
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 220 45% 20%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 220 35% 26%;
+    --sidebar-border: 220 20% 35%;
     --sidebar-ring: 205 70% 55%;
   }
 

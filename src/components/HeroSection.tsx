@@ -30,7 +30,7 @@ const HeroSection = () => {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-lg md:text-xl lg:text-2xl text-white/90 mb-8 font-light">
+          <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8 font-light">
             Controle e Segurança na palma de sua mão
           </p>
 
