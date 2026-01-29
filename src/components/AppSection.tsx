@@ -13,11 +13,11 @@ const features = [
 
 const AppSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-navy">
+    <section className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <div className="text-white order-2 lg:order-1">
+          <div className="text-foreground order-2 lg:order-1">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
               Tudo isso na palma<br />de sua mão!
             </h2>
