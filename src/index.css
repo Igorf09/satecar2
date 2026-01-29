@@ -20,12 +20,12 @@
     --primary: 205 70% 55%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary: Grayish white for subtle elements */
-    --secondary: 220 15% 85%;
+    /* Secondary: Pure white for clean elements */
+    --secondary: 0 0% 100%;
     --secondary-foreground: 220 50% 15%;
 
     --muted: 220 40% 24%;
-    --muted-foreground: 220 10% 75%;
+    --muted-foreground: 0 0% 90%;
 
     --accent: 205 70% 55%;
     --accent-foreground: 0 0% 100%;
@@ -47,8 +47,8 @@
     --blue-light: 205 75% 88%;
     --gray-bg: 220 50% 12%;
     --text-white: 0 0% 100%;
-    --text-muted: 220 10% 75%;
-    --text-gray: 220 15% 88%;
+    --text-muted: 0 0% 85%;
+    --text-gray: 0 0% 95%;
     --whatsapp: 142 70% 45%;
 
     --sidebar-background: 220 50% 12%;
