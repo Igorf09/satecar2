@@ -17,12 +17,12 @@ const BenefitsSection = () => {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-border"
+              className="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-white/20"
             >
               <img
                 src={benefit.image}
                 alt={benefit.alt}
-                className="w-full h-auto"
+                className="w-full h-auto brightness-110 contrast-110"
               />
             </div>
           ))}
