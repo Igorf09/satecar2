@@ -1,4 +1,5 @@
 import { Truck, DollarSign, Clock, Wrench } from "lucide-react";
+import robotImage from "@/assets/robot-tech.png";
 
 const services = [
   {
@@ -60,27 +61,14 @@ const ServicesSection = () => {
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
               {/* Glow effect behind image */}
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl scale-75"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/30 to-cyan-500/30 rounded-full blur-3xl scale-90"></div>
               
-              {/* Robot/Tech illustration */}
-              <div className="relative w-80 h-80 md:w-96 md:h-96 flex items-center justify-center">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/30 to-cyan-500/20 rounded-full animate-pulse"></div>
-                <div className="relative z-10 w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-[#1a3a5c] to-[#0d1e36] rounded-full 
-                              flex items-center justify-center border border-blue-500/30 shadow-2xl shadow-blue-900/50">
-                  {/* Tech Icon */}
-                  <div className="text-center">
-                    <div className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-cyan-400 
-                                  rounded-2xl flex items-center justify-center shadow-lg shadow-blue-500/30 rotate-12">
-                      <svg className="w-14 h-14 md:w-20 md:h-20 text-white -rotate-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} 
-                              d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                      </svg>
-                    </div>
-                    <p className="text-blue-300 font-semibold text-sm md:text-base">Tecnologia Avançada</p>
-                    <p className="text-blue-400/60 text-xs md:text-sm">Rastreamento Inteligente</p>
-                  </div>
-                </div>
-              </div>
+              {/* Robot Image */}
+              <img 
+                src={robotImage} 
+                alt="Robô tecnológico - Rastreamento inteligente" 
+                className="relative z-10 w-72 h-72 md:w-96 md:h-96 object-contain drop-shadow-2xl"
+              />
             </div>
           </div>
         </div>
