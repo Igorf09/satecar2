@@ -60,7 +60,7 @@ const AppSection = () => {
           {/* App Mockup */}
           <div className="flex justify-center order-1 lg:order-2">
             <img
-              src="/images/app-phone-new.jpeg"
+              src="/images/app-phone-transparent.png"
               alt="Aplicativo Satecar Mobile - Rastreamento veicular"
               className="max-w-md md:max-w-lg lg:max-w-xl w-full h-auto"
             />
