@@ -33,7 +33,7 @@ const ServicesDetailSection = () => {
               }`}
             >
               <div className={index % 2 === 1 ? "lg:order-2" : ""}>
-                <h3 className="text-xl md:text-2xl font-bold text-navy mb-4">
+                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">
                   {service.title}
                 </h3>
                 <p className="text-muted-foreground text-base md:text-lg">

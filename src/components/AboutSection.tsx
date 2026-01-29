@@ -13,7 +13,7 @@ const AboutSection = () => {
 
           {/* Image */}
           <div className="flex justify-center">
-            <div className="bg-card rounded-3xl shadow-xl p-4 md:p-6 max-w-lg w-full">
+            <div className="bg-card rounded-3xl shadow-xl p-4 md:p-6 max-w-lg w-full border border-border">
               <img
                 src="/images/about-image.png"
                 alt="Rastreamento veicular para carros, motos, caminhões e frotas em geral. Monitoramento veicular 24 horas por dia."

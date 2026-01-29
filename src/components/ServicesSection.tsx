@@ -25,7 +25,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-muted">
+    <section className="py-16 md:py-24 bg-secondary">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-12">
           <h2 className="section-title">
@@ -40,12 +40,12 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-card rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-card rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow border border-border"
             >
-              <div className="w-16 h-16 mx-auto mb-4 bg-blue-light rounded-full flex items-center justify-center">
-                <service.icon className="w-8 h-8 text-blue-accent" />
+              <div className="w-16 h-16 mx-auto mb-4 bg-primary/20 rounded-full flex items-center justify-center">
+                <service.icon className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-lg font-bold text-navy mb-2">{service.title}</h3>
+              <h3 className="text-lg font-bold text-foreground mb-2">{service.title}</h3>
               <p className="text-muted-foreground text-sm">{service.description}</p>
             </div>
           ))}
