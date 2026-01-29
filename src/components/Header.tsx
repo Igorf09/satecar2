@@ -33,7 +33,7 @@ const Header = () => {
             <img
               src="/images/logo-satecar.png"
               alt="Satecar - Rastreamento veicular para carros, motos, caminhões e frotas em geral. Monitoramento veicular 24 horas por dia."
-              className="h-10 md:h-12 w-auto"
+              className="h-14 md:h-16 lg:h-18 w-auto drop-shadow-lg"
             />
           </a>
 
