@@ -26,32 +26,48 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <section id="duvidas" className="py-20 md:py-32 bg-muted relative overflow-hidden">
-      {/* Ambient effects */}
+    <section id="duvidas" className="py-24 md:py-36 relative overflow-hidden"
+      style={{
+        background: 'linear-gradient(180deg, hsl(215 45% 16%) 0%, hsl(215 50% 13%) 50%, hsl(215 45% 16%) 100%)'
+      }}
+    >
+      {/* Premium ambient effects */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] opacity-30"
+          style={{
+            background: 'radial-gradient(ellipse, hsl(195 85% 52% / 0.08) 0%, transparent 60%)'
+          }}
+        />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="section-title text-center mb-4">
-          <span className="gradient-text">Dúvidas Frequentes</span>
-        </h2>
-        <p className="text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
-          Encontre respostas para as perguntas mais comuns sobre nossos serviços
-        </p>
+        <div className="text-center mb-20">
+          <h2 className="section-title">
+            <span className="gradient-text">Dúvidas Frequentes</span>
+          </h2>
+          <p className="section-subtitle mx-auto">
+            Encontre respostas para as perguntas mais comuns sobre nossos serviços
+          </p>
+        </div>
 
         <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion type="single" collapsible className="space-y-5">
             {faqs.map((faq, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="glass-card px-6 border-white/10 hover:border-primary/30 transition-all duration-500"
+                className="glass-card px-7 transition-all duration-400 hover:border-primary/30"
+                style={{
+                  background: 'linear-gradient(145deg, hsl(215 48% 15% / 0.8) 0%, hsl(215 50% 12% / 0.5) 100%)',
+                  borderColor: 'hsl(215 30% 22%)'
+                }}
               >
-                <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline py-6 hover:text-primary transition-colors duration-300">
+                <AccordionTrigger className="text-left font-semibold hover:no-underline py-6 transition-colors duration-300"
+                  style={{ color: 'hsl(210 40% 98%)' }}
+                >
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-6 leading-relaxed">
+                <AccordionContent className="pb-6 leading-relaxed" style={{ color: 'hsl(210 25% 70%)' }}>
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

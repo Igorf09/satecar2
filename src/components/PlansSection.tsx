@@ -101,61 +101,94 @@ const plans: Plan[] = [
 
 const PlansSection = () => {
   return (
-    <section id="planos" className="py-20 md:py-32 bg-muted relative overflow-hidden">
-      {/* Ambient effects */}
+    <section id="planos" className="py-24 md:py-36 relative overflow-hidden"
+      style={{
+        background: 'linear-gradient(180deg, hsl(215 45% 16%) 0%, hsl(215 48% 14%) 50%, hsl(215 45% 16%) 100%)'
+      }}
+    >
+      {/* Premium ambient effects */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-1/4 right-0 w-[400px] h-[400px] bg-blue-accent/10 rounded-full blur-[100px]" />
+        <div className="absolute top-1/4 left-0 w-[600px] h-[600px] opacity-40"
+          style={{
+            background: 'radial-gradient(circle, hsl(195 85% 52% / 0.1) 0%, transparent 50%)',
+            transform: 'translateX(-30%)'
+          }}
+        />
+        <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] opacity-35"
+          style={{
+            background: 'radial-gradient(circle, hsl(195 100% 60% / 0.08) 0%, transparent 50%)',
+            transform: 'translateX(30%)'
+          }}
+        />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="section-title text-center mb-4">
-          <span className="gradient-text">Nossos Planos</span>
-        </h2>
-        <p className="text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
-          Escolha o plano ideal para proteger seu veículo
-        </p>
+        <div className="text-center mb-20">
+          <h2 className="section-title">
+            <span className="gradient-text">Nossos Planos</span>
+          </h2>
+          <p className="section-subtitle mx-auto">
+            Escolha o plano ideal para proteger seu veículo
+          </p>
+        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
             <div 
               key={index} 
-              className={`plan-card flex flex-col ${index === 2 ? 'ring-2 ring-primary/50 shadow-primary/20' : ''}`}
+              className={`plan-card flex flex-col ${index === 2 ? 'lg:-mt-4 lg:mb-4' : ''}`}
+              style={index === 2 ? {
+                border: '1px solid hsl(195 85% 52% / 0.4)',
+                boxShadow: '0 30px 60px -20px hsl(215 60% 5% / 0.6), 0 0 50px -15px hsl(195 85% 52% / 0.2)'
+              } : {}}
             >
               {/* Highlight badge for Plus plan */}
               {index === 2 && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-blue-accent text-white text-xs font-bold px-4 py-1 rounded-full shadow-lg">
-                  MAIS POPULAR
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider"
+                  style={{
+                    background: 'linear-gradient(135deg, hsl(195 85% 52%) 0%, hsl(200 90% 48%) 100%)',
+                    color: 'hsl(215 60% 8%)',
+                    boxShadow: '0 4px 15px -3px hsl(195 85% 52% / 0.5)'
+                  }}
+                >
+                  Mais Popular
                 </div>
               )}
 
-              <div className="text-center mb-8">
+              <div className="text-center mb-10">
                 <h3 className="plan-title">{plan.name}</h3>
-                <p className="text-sm text-muted-foreground">{plan.subtitle}</p>
+                <p className="text-sm" style={{ color: 'hsl(210 25% 60%)' }}>{plan.subtitle}</p>
               </div>
 
-              <div className="flex-1 space-y-1 mb-8">
+              <div className="flex-1 space-y-1 mb-10">
                 {plan.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="plan-feature group">
                     {feature.included ? (
-                      <div className="w-5 h-5 rounded-full bg-gradient-to-br from-primary to-blue-accent flex items-center justify-center flex-shrink-0">
-                        <Check className="w-3 h-3 text-white" />
+                      <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0"
+                        style={{
+                          background: 'linear-gradient(135deg, hsl(195 85% 52%) 0%, hsl(200 90% 48%) 100%)',
+                          boxShadow: '0 2px 8px -2px hsl(195 85% 52% / 0.5)'
+                        }}
+                      >
+                        <Check className="w-3 h-3" style={{ color: 'hsl(215 60% 8%)' }} />
                       </div>
                     ) : (
-                      <div className="w-5 h-5 rounded-full bg-destructive/20 flex items-center justify-center flex-shrink-0">
-                        <X className="w-3 h-3 text-destructive" />
+                      <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0"
+                        style={{ background: 'hsl(0 72% 51% / 0.2)' }}
+                      >
+                        <X className="w-3 h-3" style={{ color: 'hsl(0 72% 60%)' }} />
                       </div>
                     )}
-                    <span className={feature.included ? "text-foreground" : "text-muted-foreground/60"}>
+                    <span style={{ color: feature.included ? 'hsl(210 30% 90%)' : 'hsl(210 20% 50%)' }}>
                       {feature.text}
                     </span>
                   </div>
                 ))}
               </div>
 
-              <div className="text-center pt-6 border-t border-border/50">
+              <div className="text-center pt-8" style={{ borderTop: '1px solid hsl(215 30% 22%)' }}>
                 <div className="plan-price mb-1">{plan.price}</div>
-                <div className="text-sm text-muted-foreground mb-6">{plan.period}</div>
+                <div className="text-sm mb-8" style={{ color: 'hsl(210 25% 55%)' }}>{plan.period}</div>
                 <a
                   href={WHATSAPP_LINK}
                   target="_blank"

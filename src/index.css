@@ -2,93 +2,109 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
 
 @layer base {
   :root {
-    /* Satecar Brand Colors - Navy Blue (Azul Marinho) */
-    --background: 220 50% 15%;
-    --foreground: 0 0% 100%;
+    /* ===== PREMIUM NAVY PALETTE ===== */
+    /* Deep, rich navy tones for luxury tech feel */
+    --background: 215 55% 11%;
+    --foreground: 210 40% 98%;
 
-    --card: 220 50% 20%;
-    --card-foreground: 0 0% 100%;
+    --card: 215 50% 14%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 220 50% 20%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 215 50% 14%;
+    --popover-foreground: 210 40% 98%;
 
-    /* Primary: Light Blue accent */
-    --primary: 205 70% 55%;
-    --primary-foreground: 0 0% 100%;
+    /* Primary: Vibrant cyan-blue accent */
+    --primary: 195 85% 52%;
+    --primary-foreground: 215 55% 8%;
 
-    /* Secondary: Lighter navy for contrast sections */
-    --secondary: 220 45% 18%;
-    --secondary-foreground: 0 0% 100%;
+    /* Secondary: Elevated navy */
+    --secondary: 215 48% 16%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 220 40% 24%;
-    --muted-foreground: 210 25% 75%;
+    --muted: 215 40% 20%;
+    --muted-foreground: 210 30% 70%;
 
-    --accent: 205 70% 55%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 195 85% 52%;
+    --accent-foreground: 215 55% 8%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 220 20% 40%;
-    --input: 220 20% 40%;
-    --ring: 205 70% 55%;
+    --border: 215 30% 25%;
+    --input: 215 30% 25%;
+    --ring: 195 85% 52%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    /* Custom Satecar tokens */
-    --navy: 220 50% 15%;
-    --navy-dark: 220 55% 10%;
-    --navy-light: 220 45% 22%;
-    --blue-accent: 205 70% 55%;
-    --blue-light: 205 75% 88%;
-    --gray-bg: 220 50% 12%;
+    /* ===== PREMIUM SATECAR TOKENS ===== */
+    --navy: 215 55% 11%;
+    --navy-deep: 215 60% 7%;
+    --navy-dark: 215 58% 9%;
+    --navy-light: 215 45% 18%;
+    --navy-elevated: 215 48% 15%;
+    
+    /* Vibrant accent blues */
+    --blue-accent: 195 85% 52%;
+    --blue-vibrant: 200 90% 48%;
+    --blue-glow: 195 100% 60%;
+    --blue-light: 195 80% 85%;
+    
+    /* Premium surface colors */
+    --surface-glass: 215 50% 15%;
+    --surface-elevated: 215 45% 17%;
+    
+    /* Text hierarchy */
     --text-white: 0 0% 100%;
-    --text-muted: 210 25% 80%;
-    --text-gray: 210 20% 90%;
+    --text-soft: 210 30% 92%;
+    --text-muted: 210 25% 70%;
+    --text-subtle: 210 20% 55%;
+    
+    /* Brand accent */
     --whatsapp: 142 70% 45%;
+    --gold: 45 93% 58%;
 
-    --sidebar-background: 220 50% 12%;
-    --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 205 70% 55%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 45% 20%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 220 20% 35%;
-    --sidebar-ring: 205 70% 55%;
+    --sidebar-background: 215 55% 9%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 195 85% 52%;
+    --sidebar-primary-foreground: 215 55% 8%;
+    --sidebar-accent: 215 45% 16%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 215 30% 22%;
+    --sidebar-ring: 195 85% 52%;
   }
 
   .dark {
-    --background: 220 55% 8%;
-    --foreground: 0 0% 100%;
-    --card: 220 50% 12%;
-    --card-foreground: 0 0% 100%;
-    --popover: 220 50% 12%;
-    --popover-foreground: 0 0% 100%;
-    --primary: 205 70% 55%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 220 50% 18%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 220 45% 16%;
-    --muted-foreground: 220 15% 72%;
-    --accent: 205 70% 55%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 220 35% 22%;
-    --input: 220 35% 22%;
-    --ring: 205 70% 55%;
-    --sidebar-background: 220 55% 8%;
-    --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 205 70% 55%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 45% 14%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 220 35% 20%;
-    --sidebar-ring: 205 70% 55%;
+    --background: 215 60% 6%;
+    --foreground: 210 40% 98%;
+    --card: 215 55% 10%;
+    --card-foreground: 210 40% 98%;
+    --popover: 215 55% 10%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 195 85% 52%;
+    --primary-foreground: 215 55% 8%;
+    --secondary: 215 50% 14%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 215 45% 14%;
+    --muted-foreground: 210 25% 65%;
+    --accent: 195 85% 52%;
+    --accent-foreground: 215 55% 8%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 215 35% 20%;
+    --input: 215 35% 20%;
+    --ring: 195 85% 52%;
+    --sidebar-background: 215 60% 6%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 195 85% 52%;
+    --sidebar-primary-foreground: 215 55% 8%;
+    --sidebar-accent: 215 45% 12%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 215 35% 18%;
+    --sidebar-ring: 195 85% 52%;
   }
 }
 
@@ -99,66 +115,134 @@
 
   html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
-    font-family: 'Poppins', sans-serif;
+    @apply bg-background text-foreground;
+    font-family: 'Outfit', 'Inter', sans-serif;
+    letter-spacing: -0.01em;
+  }
+
+  /* Premium typography scale */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    line-height: 1.7;
   }
 }
 
 @layer components {
-  /* ===== SOPHISTICATED BUTTONS ===== */
+  /* ===== PREMIUM BUTTONS ===== */
   .btn-televendas {
-    @apply bg-gradient-to-r from-primary to-blue-accent text-primary-foreground px-6 py-2 rounded-full font-medium text-sm 
-           transition-all duration-500 shadow-lg hover:shadow-primary/40 hover:shadow-xl hover:-translate-y-0.5
-           relative overflow-hidden;
-    background-size: 200% 100%;
+    @apply relative px-7 py-2.5 rounded-full font-semibold text-sm 
+           transition-all duration-400 overflow-hidden
+           border border-primary/40;
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--blue-vibrant)) 100%);
+    color: hsl(var(--navy-deep));
+    box-shadow: 
+      0 4px 15px -3px hsl(var(--primary) / 0.4),
+      inset 0 1px 0 0 hsl(var(--blue-glow) / 0.3);
   }
   
   .btn-televendas:hover {
-    background-position: 100% 0;
+    transform: translateY(-2px);
+    box-shadow: 
+      0 8px 25px -5px hsl(var(--primary) / 0.5),
+      0 0 20px -5px hsl(var(--primary) / 0.3),
+      inset 0 1px 0 0 hsl(var(--blue-glow) / 0.4);
+  }
+
+  .btn-televendas:active {
+    transform: translateY(0);
   }
 
   .btn-store {
-    @apply bg-gradient-to-r from-primary via-blue-accent to-primary text-primary-foreground px-8 py-3 rounded-full font-semibold text-base 
-           transition-all duration-500 shadow-lg hover:shadow-primary/50 hover:shadow-2xl hover:-translate-y-1
-           relative overflow-hidden border border-primary/30;
+    @apply relative px-10 py-4 rounded-full font-bold text-base 
+           transition-all duration-400 overflow-hidden
+           border border-primary/30;
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--blue-vibrant)) 50%, hsl(var(--primary)) 100%);
     background-size: 200% 100%;
+    color: hsl(var(--navy-deep));
+    box-shadow: 
+      0 6px 20px -4px hsl(var(--primary) / 0.45),
+      inset 0 1px 0 0 hsl(var(--blue-glow) / 0.35);
   }
 
   .btn-store:hover {
     background-position: 100% 0;
+    transform: translateY(-3px);
+    box-shadow: 
+      0 12px 35px -8px hsl(var(--primary) / 0.55),
+      0 0 30px -8px hsl(var(--primary) / 0.4),
+      inset 0 1px 0 0 hsl(var(--blue-glow) / 0.5);
   }
 
   .btn-contract {
-    @apply bg-gradient-to-r from-primary via-blue-accent to-primary text-primary-foreground px-8 py-4 rounded-full font-bold text-base 
-           transition-all duration-500 w-full shadow-lg hover:shadow-primary/60 hover:shadow-2xl hover:-translate-y-1
-           relative overflow-hidden uppercase tracking-wide;
+    @apply relative px-10 py-4 rounded-full font-bold text-base 
+           transition-all duration-400 w-full overflow-hidden
+           uppercase tracking-widest border border-primary/30;
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--blue-vibrant)) 50%, hsl(var(--primary)) 100%);
     background-size: 200% 100%;
+    color: hsl(var(--navy-deep));
+    box-shadow: 
+      0 6px 20px -4px hsl(var(--primary) / 0.45),
+      inset 0 1px 0 0 hsl(var(--blue-glow) / 0.35);
   }
 
   .btn-contract:hover {
     background-position: 100% 0;
+    transform: translateY(-3px);
+    box-shadow: 
+      0 12px 35px -8px hsl(var(--primary) / 0.55),
+      0 0 30px -8px hsl(var(--primary) / 0.4),
+      inset 0 1px 0 0 hsl(var(--blue-glow) / 0.5);
   }
 
-  /* ===== GLASS MORPHISM ===== */
+  .btn-contract:active {
+    transform: translateY(-1px);
+  }
+
+  /* ===== PREMIUM GLASS MORPHISM ===== */
   .glass {
-    @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl;
+    background: linear-gradient(135deg, 
+      hsl(var(--surface-glass) / 0.6) 0%, 
+      hsl(var(--surface-glass) / 0.3) 100%);
+    backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid hsl(var(--border) / 0.4);
+    box-shadow: 
+      0 8px 32px -8px hsl(var(--navy-deep) / 0.5),
+      inset 0 1px 0 0 hsl(210 40% 98% / 0.05);
   }
 
   .glass-card {
-    @apply bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 shadow-2xl rounded-3xl;
+    background: linear-gradient(145deg, 
+      hsl(var(--surface-elevated) / 0.8) 0%, 
+      hsl(var(--surface-glass) / 0.4) 100%);
+    backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid hsl(var(--border) / 0.3);
+    border-radius: 1.5rem;
+    box-shadow: 
+      0 20px 40px -15px hsl(var(--navy-deep) / 0.6),
+      0 0 0 1px hsl(210 40% 98% / 0.03),
+      inset 0 1px 0 0 hsl(210 40% 98% / 0.06);
   }
 
-  /* ===== SOCIAL ICONS ===== */
+  /* ===== PREMIUM SOCIAL ICONS ===== */
   .social-icon {
-    @apply w-10 h-10 rounded-full flex items-center justify-center transition-all duration-500 relative overflow-hidden;
+    @apply w-11 h-11 rounded-full flex items-center justify-center 
+           transition-all duration-400 relative overflow-hidden;
   }
 
   .social-icon::before {
     content: '';
-    @apply absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 transition-opacity duration-300;
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+    background: linear-gradient(135deg, hsl(210 40% 98% / 0.2) 0%, transparent 100%);
   }
 
   .social-icon:hover::before {
@@ -166,132 +250,279 @@
   }
 
   .social-icon-instagram {
-    @apply social-icon bg-gradient-to-br from-primary to-blue-accent text-primary-foreground hover:scale-110 hover:shadow-lg hover:shadow-primary/40;
+    @apply social-icon;
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--blue-vibrant)) 100%);
+    color: hsl(var(--navy-deep));
+    box-shadow: 0 4px 15px -3px hsl(var(--primary) / 0.35);
+  }
+
+  .social-icon-instagram:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 
+      0 8px 25px -5px hsl(var(--primary) / 0.5),
+      0 0 20px -5px hsl(var(--primary) / 0.3);
   }
 
   .social-icon-whatsapp {
-    @apply social-icon bg-secondary text-foreground hover:bg-whatsapp hover:scale-110 hover:shadow-lg hover:shadow-whatsapp/40;
+    @apply social-icon bg-secondary;
+    color: hsl(var(--foreground));
   }
 
-  /* ===== SECTION TYPOGRAPHY ===== */
+  .social-icon-whatsapp:hover {
+    background: linear-gradient(135deg, hsl(var(--whatsapp)) 0%, hsl(142 75% 40%) 100%);
+    color: white;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 
+      0 8px 25px -5px hsl(var(--whatsapp) / 0.5),
+      0 0 20px -5px hsl(var(--whatsapp) / 0.3);
+  }
+
+  /* ===== PREMIUM TYPOGRAPHY ===== */
   .section-title {
-    @apply text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 
-           bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text;
-    background-size: 200% 100%;
+    @apply text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6;
+    color: hsl(var(--foreground));
+    letter-spacing: -0.03em;
   }
 
   .section-subtitle {
-    @apply text-base md:text-lg text-muted-foreground leading-relaxed;
+    @apply text-base md:text-lg leading-relaxed max-w-2xl;
+    color: hsl(var(--text-muted));
   }
 
-  /* ===== STATS ===== */
+  /* ===== PREMIUM STATS ===== */
   .stat-number {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-primary via-blue-accent to-primary bg-clip-text text-transparent;
+    @apply text-5xl md:text-6xl lg:text-7xl font-black;
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--blue-glow)) 50%, hsl(var(--primary)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.04em;
   }
 
   .stat-label {
-    @apply text-sm md:text-base text-muted-foreground mt-2 uppercase tracking-wider font-medium;
+    @apply text-xs md:text-sm mt-3 uppercase tracking-[0.2em] font-semibold;
+    color: hsl(var(--text-muted));
   }
 
   .stat-card {
-    @apply relative p-6 rounded-2xl bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm 
-           border border-primary/20 hover:border-primary/40 transition-all duration-500
-           hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1;
+    @apply relative p-8 rounded-2xl transition-all duration-500;
+    background: linear-gradient(145deg, 
+      hsl(var(--surface-elevated) / 0.7) 0%, 
+      hsl(var(--navy) / 0.5) 100%);
+    border: 1px solid hsl(var(--primary) / 0.15);
+    box-shadow: 
+      0 20px 40px -20px hsl(var(--navy-deep) / 0.5),
+      inset 0 1px 0 0 hsl(210 40% 98% / 0.04);
   }
 
-  /* ===== PLAN CARDS ===== */
+  .stat-card:hover {
+    border-color: hsl(var(--primary) / 0.35);
+    transform: translateY(-4px);
+    box-shadow: 
+      0 30px 50px -20px hsl(var(--navy-deep) / 0.6),
+      0 0 40px -15px hsl(var(--primary) / 0.2),
+      inset 0 1px 0 0 hsl(210 40% 98% / 0.06);
+  }
+
+  /* ===== PREMIUM PLAN CARDS ===== */
   .plan-card {
-    @apply bg-gradient-to-br from-card to-card/80 rounded-3xl p-6 md:p-8 
-           shadow-xl border border-border/50 transition-all duration-500 
-           hover:shadow-2xl hover:shadow-primary/20 hover:border-primary/50 hover:-translate-y-2
-           relative overflow-hidden;
+    @apply rounded-3xl p-7 md:p-9 transition-all duration-500 relative overflow-hidden;
+    background: linear-gradient(165deg, 
+      hsl(var(--surface-elevated)) 0%, 
+      hsl(var(--card)) 100%);
+    border: 1px solid hsl(var(--border) / 0.5);
+    box-shadow: 
+      0 25px 50px -20px hsl(var(--navy-deep) / 0.5),
+      inset 0 1px 0 0 hsl(210 40% 98% / 0.04);
   }
 
   .plan-card::before {
     content: '';
-    @apply absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-0 transition-opacity duration-500;
+    @apply absolute top-0 left-0 right-0 h-px;
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      hsl(var(--primary) / 0.5) 50%, 
+      transparent 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .plan-card:hover {
+    border-color: hsl(var(--primary) / 0.4);
+    transform: translateY(-6px);
+    box-shadow: 
+      0 35px 60px -25px hsl(var(--navy-deep) / 0.6),
+      0 0 50px -20px hsl(var(--primary) / 0.25),
+      inset 0 1px 0 0 hsl(210 40% 98% / 0.06);
   }
 
   .plan-card:hover::before {
-    @apply opacity-100;
+    opacity: 1;
   }
 
   .plan-title {
-    @apply text-xl md:text-2xl font-bold text-foreground mb-2;
+    @apply text-2xl md:text-3xl font-bold mb-2;
+    letter-spacing: -0.02em;
   }
 
   .plan-price {
-    @apply text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-blue-accent bg-clip-text text-transparent;
+    @apply text-4xl md:text-5xl font-black;
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--blue-glow)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.03em;
   }
 
   .plan-feature {
-    @apply flex items-center gap-3 text-sm md:text-base text-foreground py-2 
-           transition-all duration-300 hover:translate-x-1;
+    @apply flex items-center gap-4 text-sm md:text-base py-2.5 
+           transition-all duration-300;
+    color: hsl(var(--text-soft));
   }
 
-  /* ===== SERVICE CARDS ===== */
+  .plan-feature:hover {
+    transform: translateX(4px);
+    color: hsl(var(--foreground));
+  }
+
+  /* ===== PREMIUM SERVICE CARDS ===== */
   .service-card {
-    @apply bg-gradient-to-br from-card to-card/60 rounded-3xl overflow-hidden 
-           shadow-lg transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20
-           border border-border/50 hover:border-primary/40 hover:-translate-y-2;
+    @apply rounded-3xl overflow-hidden transition-all duration-500;
+    background: linear-gradient(165deg, 
+      hsl(var(--surface-elevated)) 0%, 
+      hsl(var(--card) / 0.8) 100%);
+    border: 1px solid hsl(var(--border) / 0.4);
+    box-shadow: 0 20px 40px -15px hsl(var(--navy-deep) / 0.5);
   }
 
-  /* ===== FLOATING ELEMENTS ===== */
+  .service-card:hover {
+    border-color: hsl(var(--primary) / 0.4);
+    transform: translateY(-5px);
+    box-shadow: 
+      0 30px 50px -20px hsl(var(--navy-deep) / 0.6),
+      0 0 40px -15px hsl(var(--primary) / 0.2);
+  }
+
+  /* ===== PREMIUM FLOATING WHATSAPP ===== */
   .whatsapp-float {
-    @apply fixed bottom-6 right-6 z-50 w-16 h-16 bg-gradient-to-br from-whatsapp to-green-600 
-           rounded-full flex items-center justify-center shadow-2xl cursor-pointer 
-           transition-all duration-500 hover:scale-110 hover:shadow-whatsapp/50 hover:shadow-2xl
-           animate-pulse-glow;
+    @apply fixed bottom-7 right-7 z-50 w-16 h-16 rounded-full 
+           flex items-center justify-center cursor-pointer 
+           transition-all duration-400;
+    background: linear-gradient(135deg, hsl(var(--whatsapp)) 0%, hsl(142 75% 38%) 100%);
+    box-shadow: 
+      0 8px 25px -5px hsl(var(--whatsapp) / 0.5),
+      0 0 0 0 hsl(var(--whatsapp) / 0.4);
+    animation: whatsapp-pulse 2s ease-in-out infinite;
   }
 
-  /* ===== CHATBOT ===== */
+  @keyframes whatsapp-pulse {
+    0%, 100% {
+      box-shadow: 
+        0 8px 25px -5px hsl(var(--whatsapp) / 0.5),
+        0 0 0 0 hsl(var(--whatsapp) / 0.4);
+    }
+    50% {
+      box-shadow: 
+        0 8px 25px -5px hsl(var(--whatsapp) / 0.5),
+        0 0 0 12px hsl(var(--whatsapp) / 0);
+    }
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 
+      0 15px 35px -8px hsl(var(--whatsapp) / 0.6),
+      0 0 30px -5px hsl(var(--whatsapp) / 0.4);
+  }
+
+  /* ===== PREMIUM CHATBOT ===== */
   .chatbot-widget {
-    @apply fixed bottom-24 right-6 z-50 rounded-3xl shadow-2xl w-80 overflow-hidden 
-           border border-border/50 bg-gradient-to-br from-card to-card/90 backdrop-blur-xl;
+    @apply fixed bottom-28 right-7 z-50 rounded-3xl w-[340px] overflow-hidden;
+    background: linear-gradient(165deg, 
+      hsl(var(--surface-elevated)) 0%, 
+      hsl(var(--card)) 100%);
+    border: 1px solid hsl(var(--border) / 0.4);
+    box-shadow: 
+      0 25px 50px -15px hsl(var(--navy-deep) / 0.7),
+      inset 0 1px 0 0 hsl(210 40% 98% / 0.05);
   }
 
   .chatbot-header {
-    @apply bg-gradient-to-r from-primary to-blue-accent text-primary-foreground p-4 flex items-center gap-3;
+    @apply p-5 flex items-center gap-4;
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--blue-vibrant)) 100%);
+    color: hsl(var(--navy-deep));
   }
 
   .chatbot-option {
-    @apply w-full text-left px-4 py-3 text-sm bg-secondary/80 text-foreground rounded-xl 
-           hover:bg-gradient-to-r hover:from-primary hover:to-blue-accent hover:text-primary-foreground 
-           transition-all duration-300 font-medium hover:translate-x-1 hover:shadow-md;
+    @apply w-full text-left px-5 py-3.5 text-sm rounded-xl 
+           transition-all duration-300 font-medium;
+    background: hsl(var(--secondary) / 0.7);
+    color: hsl(var(--text-soft));
   }
 
-  /* ===== GLOW EFFECTS ===== */
+  .chatbot-option:hover {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--blue-vibrant)) 100%);
+    color: hsl(var(--navy-deep));
+    transform: translateX(4px);
+    box-shadow: 0 4px 15px -5px hsl(var(--primary) / 0.4);
+  }
+
+  /* ===== PREMIUM EFFECTS ===== */
   .glow-primary {
-    box-shadow: 0 0 40px -10px hsl(var(--primary));
+    box-shadow: 0 0 50px -15px hsl(var(--primary));
   }
 
   .glow-subtle {
-    box-shadow: 0 0 60px -20px hsl(var(--primary) / 0.5);
+    box-shadow: 0 0 80px -25px hsl(var(--primary) / 0.4);
   }
 
-  /* ===== ANIMATED GRADIENT TEXT ===== */
+  /* ===== PREMIUM GRADIENT TEXT ===== */
   .gradient-text {
-    @apply bg-gradient-to-r from-primary via-blue-accent to-primary bg-clip-text text-transparent;
+    background: linear-gradient(135deg, 
+      hsl(var(--primary)) 0%, 
+      hsl(var(--blue-glow)) 50%, 
+      hsl(var(--primary)) 100%);
     background-size: 200% auto;
-    animation: shimmer 3s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 4s ease-in-out infinite;
   }
 
-  /* ===== HOVER UNDERLINE ===== */
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% center; }
+    50% { background-position: 100% center; }
+  }
+
+  /* ===== PREMIUM HOVER UNDERLINE ===== */
   .hover-underline {
     @apply relative;
   }
 
   .hover-underline::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-blue-accent transition-all duration-500;
+    @apply absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-400;
+    background: linear-gradient(90deg, hsl(var(--primary)) 0%, hsl(var(--blue-glow)) 100%);
+    border-radius: 1px;
   }
 
   .hover-underline:hover::after {
     @apply w-full;
   }
+
+  /* ===== PREMIUM DIVIDER ===== */
+  .premium-divider {
+    @apply w-full h-px;
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      hsl(var(--border) / 0.6) 20%,
+      hsl(var(--primary) / 0.3) 50%,
+      hsl(var(--border) / 0.6) 80%,
+      transparent 100%);
+  }
 }
 
-/* Counter animation */
+/* ===== COUNTER ANIMATION ===== */
 @keyframes countUp {
   from {
     opacity: 0;
@@ -307,7 +538,31 @@
   animation: countUp 0.6s ease-out forwards;
 }
 
-/* Smooth scroll offset for fixed header */
+/* ===== SMOOTH SCROLL OFFSET ===== */
 section[id] {
   scroll-margin-top: 100px;
+}
+
+/* ===== CUSTOM SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--navy-deep));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.6);
+}
+
+/* ===== SELECTION ===== */
+::selection {
+  background: hsl(var(--primary) / 0.3);
+  color: hsl(var(--foreground));
 }
