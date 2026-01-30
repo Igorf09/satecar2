@@ -108,48 +108,112 @@
 }
 
 @layer components {
+  /* ===== SOPHISTICATED BUTTONS ===== */
   .btn-televendas {
-    @apply bg-primary text-primary-foreground px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 hover:opacity-90 shadow-md;
+    @apply bg-gradient-to-r from-primary to-blue-accent text-primary-foreground px-6 py-2 rounded-full font-medium text-sm 
+           transition-all duration-500 shadow-lg hover:shadow-primary/40 hover:shadow-xl hover:-translate-y-0.5
+           relative overflow-hidden;
+    background-size: 200% 100%;
+  }
+  
+  .btn-televendas:hover {
+    background-position: 100% 0;
   }
 
   .btn-store {
-    @apply bg-primary text-primary-foreground px-8 py-3 rounded-full font-medium text-base transition-all duration-300 hover:opacity-90;
+    @apply bg-gradient-to-r from-primary via-blue-accent to-primary text-primary-foreground px-8 py-3 rounded-full font-semibold text-base 
+           transition-all duration-500 shadow-lg hover:shadow-primary/50 hover:shadow-2xl hover:-translate-y-1
+           relative overflow-hidden border border-primary/30;
+    background-size: 200% 100%;
+  }
+
+  .btn-store:hover {
+    background-position: 100% 0;
   }
 
   .btn-contract {
-    @apply bg-primary text-primary-foreground px-8 py-3 rounded-full font-semibold text-base transition-all duration-300 hover:opacity-90 w-full;
+    @apply bg-gradient-to-r from-primary via-blue-accent to-primary text-primary-foreground px-8 py-4 rounded-full font-bold text-base 
+           transition-all duration-500 w-full shadow-lg hover:shadow-primary/60 hover:shadow-2xl hover:-translate-y-1
+           relative overflow-hidden uppercase tracking-wide;
+    background-size: 200% 100%;
   }
 
+  .btn-contract:hover {
+    background-position: 100% 0;
+  }
+
+  /* ===== GLASS MORPHISM ===== */
+  .glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl;
+  }
+
+  .glass-card {
+    @apply bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 shadow-2xl rounded-3xl;
+  }
+
+  /* ===== SOCIAL ICONS ===== */
   .social-icon {
-    @apply w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300;
+    @apply w-10 h-10 rounded-full flex items-center justify-center transition-all duration-500 relative overflow-hidden;
+  }
+
+  .social-icon::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 transition-opacity duration-300;
+  }
+
+  .social-icon:hover::before {
+    @apply opacity-100;
   }
 
   .social-icon-instagram {
-    @apply social-icon bg-primary text-primary-foreground hover:opacity-80;
+    @apply social-icon bg-gradient-to-br from-primary to-blue-accent text-primary-foreground hover:scale-110 hover:shadow-lg hover:shadow-primary/40;
   }
 
   .social-icon-whatsapp {
-    @apply social-icon bg-secondary text-foreground hover:opacity-80;
+    @apply social-icon bg-secondary text-foreground hover:bg-whatsapp hover:scale-110 hover:shadow-lg hover:shadow-whatsapp/40;
   }
 
+  /* ===== SECTION TYPOGRAPHY ===== */
   .section-title {
-    @apply text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4;
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 
+           bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text;
+    background-size: 200% 100%;
   }
 
   .section-subtitle {
     @apply text-base md:text-lg text-muted-foreground leading-relaxed;
   }
 
+  /* ===== STATS ===== */
   .stat-number {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-primary;
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-primary via-blue-accent to-primary bg-clip-text text-transparent;
   }
 
   .stat-label {
-    @apply text-sm md:text-base text-muted-foreground mt-2;
+    @apply text-sm md:text-base text-muted-foreground mt-2 uppercase tracking-wider font-medium;
   }
 
+  .stat-card {
+    @apply relative p-6 rounded-2xl bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm 
+           border border-primary/20 hover:border-primary/40 transition-all duration-500
+           hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1;
+  }
+
+  /* ===== PLAN CARDS ===== */
   .plan-card {
-    @apply bg-card rounded-3xl p-6 md:p-8 shadow-xl border border-border transition-all duration-300 hover:shadow-2xl hover:border-primary/50;
+    @apply bg-gradient-to-br from-card to-card/80 rounded-3xl p-6 md:p-8 
+           shadow-xl border border-border/50 transition-all duration-500 
+           hover:shadow-2xl hover:shadow-primary/20 hover:border-primary/50 hover:-translate-y-2
+           relative overflow-hidden;
+  }
+
+  .plan-card::before {
+    content: '';
+    @apply absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-0 transition-opacity duration-500;
+  }
+
+  .plan-card:hover::before {
+    @apply opacity-100;
   }
 
   .plan-title {
@@ -157,31 +221,73 @@
   }
 
   .plan-price {
-    @apply text-2xl md:text-3xl font-bold text-primary;
+    @apply text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-blue-accent bg-clip-text text-transparent;
   }
 
   .plan-feature {
-    @apply flex items-center gap-3 text-sm md:text-base text-foreground py-1;
+    @apply flex items-center gap-3 text-sm md:text-base text-foreground py-2 
+           transition-all duration-300 hover:translate-x-1;
   }
 
+  /* ===== SERVICE CARDS ===== */
   .service-card {
-    @apply bg-card rounded-3xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl border border-border;
+    @apply bg-gradient-to-br from-card to-card/60 rounded-3xl overflow-hidden 
+           shadow-lg transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20
+           border border-border/50 hover:border-primary/40 hover:-translate-y-2;
   }
 
+  /* ===== FLOATING ELEMENTS ===== */
   .whatsapp-float {
-    @apply fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg cursor-pointer transition-all duration-300 hover:scale-110;
+    @apply fixed bottom-6 right-6 z-50 w-16 h-16 bg-gradient-to-br from-whatsapp to-green-600 
+           rounded-full flex items-center justify-center shadow-2xl cursor-pointer 
+           transition-all duration-500 hover:scale-110 hover:shadow-whatsapp/50 hover:shadow-2xl
+           animate-pulse-glow;
   }
 
+  /* ===== CHATBOT ===== */
   .chatbot-widget {
-    @apply fixed bottom-24 right-6 z-50 bg-card rounded-2xl shadow-2xl w-80 overflow-hidden border border-border;
+    @apply fixed bottom-24 right-6 z-50 rounded-3xl shadow-2xl w-80 overflow-hidden 
+           border border-border/50 bg-gradient-to-br from-card to-card/90 backdrop-blur-xl;
   }
 
   .chatbot-header {
-    @apply bg-primary text-primary-foreground p-4 flex items-center gap-3;
+    @apply bg-gradient-to-r from-primary to-blue-accent text-primary-foreground p-4 flex items-center gap-3;
   }
 
   .chatbot-option {
-    @apply w-full text-left px-4 py-3 text-sm bg-secondary text-foreground rounded-xl hover:bg-primary hover:text-primary-foreground transition-all duration-300 font-medium;
+    @apply w-full text-left px-4 py-3 text-sm bg-secondary/80 text-foreground rounded-xl 
+           hover:bg-gradient-to-r hover:from-primary hover:to-blue-accent hover:text-primary-foreground 
+           transition-all duration-300 font-medium hover:translate-x-1 hover:shadow-md;
+  }
+
+  /* ===== GLOW EFFECTS ===== */
+  .glow-primary {
+    box-shadow: 0 0 40px -10px hsl(var(--primary));
+  }
+
+  .glow-subtle {
+    box-shadow: 0 0 60px -20px hsl(var(--primary) / 0.5);
+  }
+
+  /* ===== ANIMATED GRADIENT TEXT ===== */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-blue-accent to-primary bg-clip-text text-transparent;
+    background-size: 200% auto;
+    animation: shimmer 3s linear infinite;
+  }
+
+  /* ===== HOVER UNDERLINE ===== */
+  .hover-underline {
+    @apply relative;
+  }
+
+  .hover-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-blue-accent transition-all duration-500;
+  }
+
+  .hover-underline:hover::after {
+    @apply w-full;
   }
 }
 
