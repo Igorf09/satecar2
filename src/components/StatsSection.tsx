@@ -110,8 +110,8 @@ const StatsSection = () => {
           />
           <StatCounter
             end={4}
-            prefix="R$"
-            suffix="Milhões"
+            prefix="R$ "
+            suffix=" Milhões"
             label="Patrimônio Recuperado"
           />
           <StatCounter
