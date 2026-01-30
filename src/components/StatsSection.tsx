@@ -52,22 +52,37 @@ const StatCounter = ({ end, prefix = "", suffix = "", label }: StatCounterProps)
   }, [isVisible, end]);
 
   return (
-    <div ref={ref} className="text-center">
-      <div className="stat-number">
-        {prefix}{count.toLocaleString('pt-BR')}{suffix}
+    <div ref={ref} className="stat-card text-center group">
+      {/* Decorative glow */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
+      
+      <div className="relative z-10">
+        <div className="stat-number">
+          {prefix}{count.toLocaleString('pt-BR')}{suffix}
+        </div>
+        <div className="stat-label">{label}</div>
       </div>
-      <div className="stat-label">{label}</div>
     </div>
   );
 };
 
 const StatsSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-background">
-      <div className="container mx-auto px-4">
-        <h2 className="section-title text-center mb-12">Satecar em 2026</h2>
+    <section className="py-20 md:py-32 bg-background relative overflow-hidden">
+      {/* Ambient background effect */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-3xl" />
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <h2 className="section-title text-center mb-4">
+          <span className="gradient-text">Satecar em 2026</span>
+        </h2>
+        <p className="text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
+          Números que comprovam nossa excelência em rastreamento veicular
+        </p>
         
-        <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
           <StatCounter
             end={98}
             suffix="%"

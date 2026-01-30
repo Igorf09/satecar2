@@ -25,7 +25,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50 shadow-lg shadow-background/20">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -46,7 +46,7 @@ const Header = () => {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-foreground font-medium hover:text-primary transition-colors"
+                  className="text-foreground font-medium hover:text-primary transition-all duration-300 hover-underline"
                 >
                   {item.label}
                 </a>
@@ -54,7 +54,7 @@ const Header = () => {
                 <button
                   key={item.label}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-foreground font-medium hover:text-primary transition-colors"
+                  className="text-foreground font-medium hover:text-primary transition-all duration-300 hover-underline"
                 >
                   {item.label}
                 </button>

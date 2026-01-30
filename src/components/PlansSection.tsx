@@ -101,36 +101,61 @@ const plans: Plan[] = [
 
 const PlansSection = () => {
   return (
-    <section id="planos" className="py-16 md:py-24 bg-muted">
-      <div className="container mx-auto px-4">
-        <h2 className="section-title text-center mb-12">Nossos Planos</h2>
+    <section id="planos" className="py-20 md:py-32 bg-muted relative overflow-hidden">
+      {/* Ambient effects */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-1/4 right-0 w-[400px] h-[400px] bg-blue-accent/10 rounded-full blur-[100px]" />
+      </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      <div className="container mx-auto px-4 relative z-10">
+        <h2 className="section-title text-center mb-4">
+          <span className="gradient-text">Nossos Planos</span>
+        </h2>
+        <p className="text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
+          Escolha o plano ideal para proteger seu veículo
+        </p>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
           {plans.map((plan, index) => (
-            <div key={index} className="plan-card flex flex-col">
-              <div className="text-center mb-6">
+            <div 
+              key={index} 
+              className={`plan-card flex flex-col ${index === 2 ? 'ring-2 ring-primary/50 shadow-primary/20' : ''}`}
+            >
+              {/* Highlight badge for Plus plan */}
+              {index === 2 && (
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-blue-accent text-white text-xs font-bold px-4 py-1 rounded-full shadow-lg">
+                  MAIS POPULAR
+                </div>
+              )}
+
+              <div className="text-center mb-8">
                 <h3 className="plan-title">{plan.name}</h3>
                 <p className="text-sm text-muted-foreground">{plan.subtitle}</p>
               </div>
 
-              <div className="flex-1 space-y-2 mb-6">
+              <div className="flex-1 space-y-1 mb-8">
                 {plan.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="plan-feature">
+                  <div key={featureIndex} className="plan-feature group">
                     {feature.included ? (
-                      <Check className="w-5 h-5 text-primary flex-shrink-0" />
+                      <div className="w-5 h-5 rounded-full bg-gradient-to-br from-primary to-blue-accent flex items-center justify-center flex-shrink-0">
+                        <Check className="w-3 h-3 text-white" />
+                      </div>
                     ) : (
-                      <X className="w-5 h-5 text-destructive flex-shrink-0" />
+                      <div className="w-5 h-5 rounded-full bg-destructive/20 flex items-center justify-center flex-shrink-0">
+                        <X className="w-3 h-3 text-destructive" />
+                      </div>
                     )}
-                    <span className={feature.included ? "" : "text-muted-foreground"}>
+                    <span className={feature.included ? "text-foreground" : "text-muted-foreground/60"}>
                       {feature.text}
                     </span>
                   </div>
                 ))}
               </div>
 
-              <div className="text-center pt-4 border-t border-border">
+              <div className="text-center pt-6 border-t border-border/50">
                 <div className="plan-price mb-1">{plan.price}</div>
-                <div className="text-sm text-muted-foreground mb-4">{plan.period}</div>
+                <div className="text-sm text-muted-foreground mb-6">{plan.period}</div>
                 <a
                   href={WHATSAPP_LINK}
                   target="_blank"

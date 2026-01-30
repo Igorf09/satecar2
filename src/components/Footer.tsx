@@ -5,46 +5,51 @@ const INSTAGRAM_LINK = "https://www.instagram.com/satecar_rastreamentos/";
 
 const Footer = () => {
   return (
-    <footer className="bg-card py-12 border-t border-border">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+    <footer className="bg-gradient-to-b from-card to-background py-16 border-t border-border/50 relative overflow-hidden">
+      {/* Ambient glow */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[200px] bg-primary/5 rounded-full blur-[80px]" />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo */}
-          <a href="/" className="flex-shrink-0">
+          <a href="/" className="flex-shrink-0 group">
             <img
               src="/images/logo-satecar.png"
               alt="Satecar - Rastreamento Veicular"
-              className="h-10 w-auto"
+              className="h-12 w-auto transition-all duration-500 group-hover:scale-105 group-hover:brightness-125"
             />
           </a>
 
           {/* Links */}
-          <nav className="flex flex-wrap justify-center gap-6 text-sm">
-            <a href="#planos" className="text-foreground/80 hover:text-primary transition-colors">
+          <nav className="flex flex-wrap justify-center gap-8 text-sm">
+            <a href="#planos" className="text-foreground/80 hover:text-primary transition-all duration-300 hover-underline font-medium">
               Planos
             </a>
-            <a href="#vantagens" className="text-foreground/80 hover:text-primary transition-colors">
+            <a href="#vantagens" className="text-foreground/80 hover:text-primary transition-all duration-300 hover-underline font-medium">
               Vantagens
             </a>
-            <a href="#duvidas" className="text-foreground/80 hover:text-primary transition-colors">
+            <a href="#duvidas" className="text-foreground/80 hover:text-primary transition-all duration-300 hover-underline font-medium">
               Dúvidas
             </a>
             <a
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground/80 hover:text-primary transition-colors"
+              className="text-foreground/80 hover:text-primary transition-all duration-300 hover-underline font-medium"
             >
               Contato
             </a>
           </nav>
 
           {/* Social */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-4">
             <a
               href={INSTAGRAM_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+              className="social-icon-instagram"
               aria-label="Instagram"
             >
               <Instagram size={20} />
@@ -53,7 +58,7 @@ const Footer = () => {
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+              className="social-icon-whatsapp"
               aria-label="WhatsApp"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
@@ -64,7 +69,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="mt-8 pt-8 border-t border-border text-center">
+        <div className="mt-12 pt-8 border-t border-border/30 text-center">
           <p className="text-muted-foreground text-sm">
             © {new Date().getFullYear()} Satecar Rastreamentos. Todos os direitos reservados.
           </p>
