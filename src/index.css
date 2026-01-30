@@ -291,12 +291,12 @@
 
   /* ===== PREMIUM STATS ===== */
   .stat-number {
-    @apply text-5xl md:text-6xl lg:text-7xl font-black;
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black whitespace-nowrap;
     background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--blue-glow)) 50%, hsl(var(--primary)) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.02em;
   }
 
   .stat-label {
