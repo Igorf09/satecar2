@@ -25,15 +25,22 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50 shadow-lg shadow-background/20">
-      <div className="container mx-auto px-4 py-4">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/30"
+      style={{
+        background: 'linear-gradient(180deg, hsl(215 55% 11% / 0.95) 0%, hsl(215 55% 11% / 0.85) 100%)',
+        backdropFilter: 'blur(20px) saturate(180%)',
+        boxShadow: '0 4px 30px -10px hsl(215 60% 5% / 0.5)'
+      }}
+    >
+      <div className="container mx-auto px-4 py-5">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="/" className="flex-shrink-0">
+          <a href="/" className="flex-shrink-0 group">
             <img
               src="/images/logo-satecar.png"
               alt="Satecar - Rastreamento veicular para carros, motos, caminhões e frotas em geral. Monitoramento veicular 24 horas por dia."
-              className="h-14 md:h-16 lg:h-18 w-auto brightness-125 contrast-110 drop-shadow-lg"
+              className="h-14 md:h-16 lg:h-18 w-auto transition-all duration-400 group-hover:brightness-125"
+              style={{ filter: 'brightness(1.15) contrast(1.1) drop-shadow(0 2px 8px hsl(195 85% 52% / 0.3))' }}
             />
           </a>
 

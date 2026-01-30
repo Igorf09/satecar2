@@ -68,21 +68,41 @@ const StatCounter = ({ end, prefix = "", suffix = "", label }: StatCounterProps)
 
 const StatsSection = () => {
   return (
-    <section className="py-20 md:py-32 bg-background relative overflow-hidden">
-      {/* Ambient background effect */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-3xl" />
+    <section className="py-24 md:py-36 relative overflow-hidden"
+      style={{
+        background: 'linear-gradient(180deg, hsl(215 55% 11%) 0%, hsl(215 58% 9%) 50%, hsl(215 55% 11%) 100%)'
+      }}
+    >
+      {/* Premium ambient effects */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] opacity-40"
+          style={{
+            background: 'radial-gradient(ellipse, hsl(195 85% 52% / 0.15) 0%, transparent 60%)'
+          }}
+        />
+        <div className="absolute top-0 left-0 w-full h-px"
+          style={{
+            background: 'linear-gradient(90deg, transparent 0%, hsl(195 85% 52% / 0.3) 50%, transparent 100%)'
+          }}
+        />
+        <div className="absolute bottom-0 left-0 w-full h-px"
+          style={{
+            background: 'linear-gradient(90deg, transparent 0%, hsl(195 85% 52% / 0.2) 50%, transparent 100%)'
+          }}
+        />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="section-title text-center mb-4">
-          <span className="gradient-text">Satecar em 2026</span>
-        </h2>
-        <p className="text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
-          Números que comprovam nossa excelência em rastreamento veicular
-        </p>
+        <div className="text-center mb-20">
+          <h2 className="section-title">
+            <span className="gradient-text">Satecar em 2026</span>
+          </h2>
+          <p className="section-subtitle mx-auto">
+            Números que comprovam nossa excelência em rastreamento veicular
+          </p>
+        </div>
         
-        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid md:grid-cols-3 gap-8 md:gap-10 max-w-5xl mx-auto">
           <StatCounter
             end={98}
             suffix="%"

@@ -5,46 +5,69 @@ const INSTAGRAM_LINK = "https://www.instagram.com/satecar_rastreamentos/";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-b from-card to-background py-16 border-t border-border/50 relative overflow-hidden">
+    <footer className="py-20 relative overflow-hidden"
+      style={{
+        background: 'linear-gradient(180deg, hsl(215 48% 14%) 0%, hsl(215 55% 11%) 40%, hsl(215 60% 7%) 100%)'
+      }}
+    >
+      {/* Top border accent */}
+      <div className="absolute top-0 left-0 w-full h-px"
+        style={{
+          background: 'linear-gradient(90deg, transparent 0%, hsl(195 85% 52% / 0.3) 50%, transparent 100%)'
+        }}
+      />
+      
       {/* Ambient glow */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[200px] bg-primary/5 rounded-full blur-[80px]" />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1000px] h-[300px] opacity-20"
+          style={{
+            background: 'radial-gradient(ellipse, hsl(195 85% 52% / 0.15) 0%, transparent 60%)'
+          }}
+        />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-10">
           {/* Logo */}
           <a href="/" className="flex-shrink-0 group">
             <img
               src="/images/logo-satecar.png"
               alt="Satecar - Rastreamento Veicular"
-              className="h-12 w-auto transition-all duration-500 group-hover:scale-105 group-hover:brightness-125"
+              className="h-14 w-auto transition-all duration-400 group-hover:scale-105"
+              style={{ filter: 'brightness(1.15) drop-shadow(0 2px 8px hsl(195 85% 52% / 0.3))' }}
             />
           </a>
 
           {/* Links */}
-          <nav className="flex flex-wrap justify-center gap-8 text-sm">
-            <a href="#planos" className="text-foreground/80 hover:text-primary transition-all duration-300 hover-underline font-medium">
+          <nav className="flex flex-wrap justify-center gap-10 text-sm">
+            <a href="#planos" className="hover-underline font-medium transition-colors duration-300"
+              style={{ color: 'hsl(210 30% 85%)' }}
+            >
               Planos
             </a>
-            <a href="#vantagens" className="text-foreground/80 hover:text-primary transition-all duration-300 hover-underline font-medium">
+            <a href="#vantagens" className="hover-underline font-medium transition-colors duration-300"
+              style={{ color: 'hsl(210 30% 85%)' }}
+            >
               Vantagens
             </a>
-            <a href="#duvidas" className="text-foreground/80 hover:text-primary transition-all duration-300 hover-underline font-medium">
+            <a href="#duvidas" className="hover-underline font-medium transition-colors duration-300"
+              style={{ color: 'hsl(210 30% 85%)' }}
+            >
               Dúvidas
             </a>
             <a
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground/80 hover:text-primary transition-all duration-300 hover-underline font-medium"
+              className="hover-underline font-medium transition-colors duration-300"
+              style={{ color: 'hsl(210 30% 85%)' }}
             >
               Contato
             </a>
           </nav>
 
           {/* Social */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-5">
             <a
               href={INSTAGRAM_LINK}
               target="_blank"
@@ -69,8 +92,8 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="mt-12 pt-8 border-t border-border/30 text-center">
-          <p className="text-muted-foreground text-sm">
+        <div className="mt-16 pt-10 text-center premium-divider">
+          <p className="text-sm mt-10" style={{ color: 'hsl(210 25% 55%)' }}>
             © {new Date().getFullYear()} Satecar Rastreamentos. Todos os direitos reservados.
           </p>
         </div>

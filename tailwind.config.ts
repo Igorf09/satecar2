@@ -14,7 +14,10 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Poppins', 'sans-serif'],
+        sans: ['Outfit', 'Inter', 'sans-serif'],
+      },
+      transitionDuration: {
+        '400': '400ms',
       },
       colors: {
         border: "hsl(var(--border))",
@@ -63,8 +66,16 @@ export default {
         navy: {
           DEFAULT: "hsl(var(--navy))",
           dark: "hsl(var(--navy-dark))",
+          deep: "hsl(var(--navy-deep))",
+          light: "hsl(var(--navy-light))",
+          elevated: "hsl(var(--navy-elevated))",
         },
         "blue-accent": "hsl(var(--blue-accent))",
+        "blue-vibrant": "hsl(var(--blue-vibrant))",
+        "blue-glow": "hsl(var(--blue-glow))",
+        "blue-light": "hsl(var(--blue-light))",
+        "surface-glass": "hsl(var(--surface-glass))",
+        "surface-elevated": "hsl(var(--surface-elevated))",
         "blue-light": "hsl(var(--blue-light))",
         "gray-bg": "hsl(var(--gray-bg))",
         whatsapp: "hsl(var(--whatsapp))",
