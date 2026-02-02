@@ -1,37 +1,29 @@
-import { Star, Quote } from "lucide-react";
+import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Carlos Mendes",
-    role: "Empresário",
-    location: "São Paulo, SP",
-    avatar: "CM",
+    name: "Xéu Carlos Henrique",
+    reviews: "10 avaliações",
+    avatar: "XC",
     rating: 5,
-    text: "Recuperaram meu carro em menos de 2 horas após o roubo. Serviço impecável e atendimento 24h de verdade. Recomendo a todos!",
+    text: "Empresa séria que conheço há mais de 20 anos e indico de olho fechado, sem falar que o preço é bem em conta e o Serviço é de altíssima qualidade!!!",
+    time: "um ano atrás"
   },
   {
-    name: "Ana Paula Silva",
-    role: "Motorista de Aplicativo",
-    location: "Rio de Janeiro, RJ",
-    avatar: "AS",
+    name: "Leonardo Medina",
+    reviews: "13 avaliações",
+    avatar: "LM",
     rating: 5,
-    text: "Uso o plano Plus há 1 ano. A assistência veicular já me salvou 3 vezes na estrada. Vale cada centavo do investimento.",
+    text: "Excelente empresa recomendo!! Presta um excelente trabalho, minha família utiliza seus serviços, não tenho nada a reclamar!! Recomendo essa empresa, pessoas sérias prestando um excelente trabalho de qualidade",
+    time: "um ano atrás"
   },
   {
-    name: "Roberto Ferreira",
-    role: "Gestor de Frota",
-    location: "Belo Horizonte, MG",
-    avatar: "RF",
+    name: "Everton Assis",
+    reviews: "6 avaliações",
+    avatar: "EA",
     rating: 5,
-    text: "Gerencio 15 veículos com a Satecar. O app é muito intuitivo e os relatórios me ajudam a economizar combustível.",
-  },
-  {
-    name: "Mariana Costa",
-    role: "Autônoma",
-    location: "Curitiba, PR",
-    avatar: "MC",
-    rating: 5,
-    text: "Melhor custo-benefício do mercado. Já tive outras empresas, mas a Satecar é disparada a mais profissional.",
+    text: "Pessoal a qualidade e a confiabilidade desta empresa são excepcionais. Levei meu carro para trocar o sistema de ar-condicionado e o serviço foi realizado com excelência. Além disso, fizeram uma limpeza do motor e verificaram o sistema de drenagem da água de chuva, que não estava incluso no serviço combinado. Satecar eu indico!",
+    time: "um ano atrás"
   },
 ];
 
@@ -72,7 +64,7 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
@@ -83,31 +75,20 @@ const TestimonialsSection = () => {
                 animationDelay: `${index * 100}ms`
               }}
             >
-              {/* Quote icon */}
-              <div className="absolute top-5 right-5 opacity-20 group-hover:opacity-40 transition-opacity duration-300">
-                <Quote className="w-8 h-8" style={{ color: 'hsl(195 85% 52%)' }} />
+              {/* Google icon badge */}
+              <div className="absolute top-5 right-5">
+                <svg className="w-6 h-6" viewBox="0 0 24 24">
+                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                </svg>
               </div>
 
-              {/* Rating stars */}
-              <div className="flex gap-1 mb-5">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-4 h-4 fill-current"
-                    style={{ color: 'hsl(45 93% 58%)' }}
-                  />
-                ))}
-              </div>
-
-              {/* Testimonial text */}
-              <p className="text-sm leading-relaxed mb-6" style={{ color: 'hsl(210 30% 80%)' }}>
-                "{testimonial.text}"
-              </p>
-
-              {/* Author */}
-              <div className="flex items-center gap-4 pt-5" style={{ borderTop: '1px solid hsl(215 30% 22%)' }}>
+              {/* Author at top */}
+              <div className="flex items-center gap-4 mb-4">
                 {/* Avatar */}
-                <div className="w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm"
+                <div className="w-11 h-11 rounded-full flex items-center justify-center font-bold text-sm"
                   style={{
                     background: 'linear-gradient(135deg, hsl(195 85% 52%) 0%, hsl(200 90% 48%) 100%)',
                     color: 'hsl(215 60% 8%)',
@@ -121,10 +102,29 @@ const TestimonialsSection = () => {
                     {testimonial.name}
                   </p>
                   <p className="text-xs" style={{ color: 'hsl(210 25% 60%)' }}>
-                    {testimonial.role} • {testimonial.location}
+                    {testimonial.reviews}
                   </p>
                 </div>
               </div>
+
+              {/* Rating stars + time */}
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex gap-0.5">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="w-4 h-4 fill-current"
+                      style={{ color: 'hsl(45 93% 50%)' }}
+                    />
+                  ))}
+                </div>
+                <span className="text-xs" style={{ color: 'hsl(210 25% 55%)' }}>{testimonial.time}</span>
+              </div>
+
+              {/* Testimonial text */}
+              <p className="text-sm leading-relaxed" style={{ color: 'hsl(210 30% 80%)' }}>
+                {testimonial.text}
+              </p>
             </div>
           ))}
         </div>
