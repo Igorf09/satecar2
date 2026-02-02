@@ -50,12 +50,24 @@ const ServicesSection = () => {
     <section 
       ref={sectionRef}
       className="py-24 md:py-36 relative overflow-hidden"
-      style={{ 
-        background: 'linear-gradient(160deg, hsl(200 45% 22%) 0%, hsl(205 50% 28%) 35%, hsl(200 48% 24%) 70%, hsl(205 45% 20%) 100%)' 
-      }}
     >
+      {/* Background Image - Same as Hero */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ 
+          backgroundImage: 'url(/images/hero-bg-new.png)',
+        }}
+      />
+      {/* Dark overlay for better contrast */}
+      <div 
+        className="absolute inset-0"
+        style={{ 
+          background: 'linear-gradient(160deg, hsl(200 45% 12% / 0.85) 0%, hsl(205 50% 15% / 0.8) 50%, hsl(200 48% 12% / 0.85) 100%)' 
+        }}
+      />
+      
       {/* Premium ambient glow effects */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 right-0 w-[700px] h-[700px] opacity-50"
           style={{
             background: 'radial-gradient(circle, hsl(195 85% 52% / 0.15) 0%, transparent 50%)',
