@@ -51,11 +51,11 @@ const ServicesSection = () => {
       ref={sectionRef}
       className="py-24 md:py-36 relative overflow-hidden"
     >
-      {/* Background Image - Car */}
+      {/* Background Image - BMW with Satecar logo */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ 
-          backgroundImage: 'url(/images/services-car-bg.png)',
+          backgroundImage: 'url(/images/services-bmw-bg.png)',
         }}
       />
       {/* Dark overlay for better contrast */}
