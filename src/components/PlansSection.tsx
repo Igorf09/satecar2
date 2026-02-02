@@ -1,5 +1,5 @@
 import { Check, X } from "lucide-react";
-
+import { useEffect, useRef, useState } from "react";
 const WHATSAPP_LINK = "https://wa.link/cei0oz";
 
 interface PlanFeature {
@@ -100,8 +100,31 @@ const plans: Plan[] = [
 ];
 
 const PlansSection = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section id="planos" className="py-24 md:py-36 relative overflow-hidden"
+    <section 
+      ref={sectionRef}
+      id="planos" 
+      className="py-24 md:py-36 relative overflow-hidden"
       style={{
         background: 'linear-gradient(180deg, hsl(215 45% 16%) 0%, hsl(215 48% 14%) 50%, hsl(215 45% 16%) 100%)'
       }}
@@ -123,7 +146,7 @@ const PlansSection = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-20">
+        <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="section-title">
             <span className="gradient-text">Nossos Planos</span>
           </h2>
@@ -136,11 +159,16 @@ const PlansSection = () => {
           {plans.map((plan, index) => (
             <div 
               key={index} 
-              className={`plan-card flex flex-col ${index === 2 ? 'lg:-mt-4 lg:mb-4' : ''}`}
-              style={index === 2 ? {
-                border: '1px solid hsl(195 85% 52% / 0.4)',
-                boxShadow: '0 30px 60px -20px hsl(215 60% 5% / 0.6), 0 0 50px -15px hsl(195 85% 52% / 0.2)'
-              } : {}}
+              className={`plan-card flex flex-col transition-all duration-700 ${index === 2 ? 'lg:-mt-4 lg:mb-4' : ''} ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+              }`}
+              style={{
+                transitionDelay: `${index * 200}ms`,
+                ...(index === 2 ? {
+                  border: '1px solid hsl(195 85% 52% / 0.4)',
+                  boxShadow: '0 30px 60px -20px hsl(215 60% 5% / 0.6), 0 0 50px -15px hsl(195 85% 52% / 0.2)'
+                } : {})
+              }}
             >
               {/* Highlight badge for Plus plan */}
               {index === 2 && (

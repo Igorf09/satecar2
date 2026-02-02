@@ -1,4 +1,5 @@
 import { Network, Wallet, Clock, Download } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import robotImage from "@/assets/robot-transparent.png";
 
 const services = [
@@ -25,8 +26,30 @@ const services = [
 ];
 
 const ServicesSection = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.15 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="py-24 md:py-36 relative overflow-hidden"
+    <section 
+      ref={sectionRef}
+      className="py-24 md:py-36 relative overflow-hidden"
       style={{ 
         background: 'linear-gradient(160deg, hsl(200 45% 22%) 0%, hsl(205 50% 28%) 35%, hsl(200 48% 24%) 70%, hsl(205 45% 20%) 100%)' 
       }}
@@ -60,9 +83,11 @@ const ServicesSection = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group glass-card p-7 transition-all duration-500 hover:-translate-y-3"
+                className={`group glass-card p-7 transition-all duration-500 hover:-translate-y-3 ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
                 style={{ 
-                  animationDelay: `${index * 100}ms`,
+                  transitionDelay: `${index * 150}ms`,
                   background: 'linear-gradient(145deg, hsl(200 50% 18% / 0.7) 0%, hsl(205 50% 15% / 0.4) 100%)',
                   borderColor: 'hsl(195 85% 52% / 0.15)'
                 }}
@@ -93,7 +118,9 @@ const ServicesSection = () => {
           </div>
 
           {/* Robot Image - Right Side with premium float animation */}
-          <div className="lg:col-span-6 relative h-[400px] md:h-[500px] lg:h-[650px]">
+          <div className={`lg:col-span-6 relative h-[400px] md:h-[500px] lg:h-[650px] transition-all duration-1000 delay-300 ${
+            isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+          }`}>
             <img 
               src={robotImage} 
               alt="Robô Satecar - Rastreamento inteligente" 
