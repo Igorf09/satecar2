@@ -1,6 +1,4 @@
-const WHATSAPP_NUMBER = "5511999999999"; // Replace with actual number
-const WHATSAPP_MESSAGE = "Olá! Vim pelo site da Satecar e quero saber mais sobre rastreamento veicular.";
-const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+const WHATSAPP_LINK = "https://wa.link/cei0oz";
 
 const WhatsAppFloat = () => {
   return (

@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { X, MessageCircle } from "lucide-react";
 
-const WHATSAPP_NUMBER = "5511999999999"; // Replace with actual number
-const WHATSAPP_MESSAGE = "Olá! Vim pelo site da Satecar e quero saber mais sobre rastreamento veicular.";
-const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+const WHATSAPP_LINK = "https://wa.link/cei0oz";
 
 const ChatbotWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
