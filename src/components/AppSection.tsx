@@ -96,7 +96,7 @@ const AppSection = () => {
                 }}
               />
               <img
-                src="/images/hand-phone-final-clean.png"
+                src="/images/hand-phone-transparent-final.png"
                 alt="Aplicativo Satecar Mobile - Rastreamento veicular"
                 className="relative max-w-md md:max-w-lg lg:max-w-xl w-full h-auto animate-float"
                 style={{ filter: 'drop-shadow(0 30px 50px hsl(195 85% 52% / 0.25))' }}
