@@ -1,6 +1,6 @@
 import { Network, Wallet, Clock, Download } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import robotImage from "@/assets/robot-antennas-transparent.png";
+import robotImage from "@/assets/robot-transparent.png";
 
 const services = [
   {
