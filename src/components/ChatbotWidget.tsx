@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { X, MessageCircle } from "lucide-react";
-import robotMascot from "@/assets/robot-chat-mascot.png";
 
 const WHATSAPP_LINK = "https://wa.link/cei0oz";
 
@@ -24,13 +23,13 @@ const ChatbotWidget = () => {
       {/* Chat Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-24 right-6 z-50 w-16 h-16 bg-navy rounded-full flex items-center justify-center shadow-lg cursor-pointer transition-all duration-300 hover:scale-110 overflow-hidden"
+        className="fixed bottom-24 right-6 z-50 w-14 h-14 bg-navy rounded-full flex items-center justify-center shadow-lg cursor-pointer transition-all duration-300 hover:scale-110"
         aria-label="Abrir chat"
       >
         {isOpen ? (
           <X className="w-6 h-6 text-white" />
         ) : (
-          <img src={robotMascot} alt="Assistente" className="w-14 h-14 object-contain" />
+          <MessageCircle className="w-6 h-6 text-white" />
         )}
       </button>
 
