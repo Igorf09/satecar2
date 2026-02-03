@@ -2,7 +2,7 @@ const WHATSAPP_LINK = "https://wa.link/cei0oz";
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full">
+    <section className="relative w-full bg-background">
       {/* Background Image - Full Hero */}
       <a
         href={WHATSAPP_LINK}
