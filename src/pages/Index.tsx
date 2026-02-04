@@ -10,7 +10,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
-import SegundaViaFloat from "@/components/SegundaViaFloat";
+import ChatbotWidget from "@/components/ChatbotWidget";
 
 const Index = () => {
   return (
@@ -29,7 +29,7 @@ const Index = () => {
       </main>
       <Footer />
       <WhatsAppFloat />
-      <SegundaViaFloat />
+      <ChatbotWidget />
     </div>
   );
 };
