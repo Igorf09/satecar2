@@ -23,13 +23,13 @@ const ChatbotWidget = () => {
       {/* Chat Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-24 right-6 z-50 w-14 h-14 bg-navy rounded-full flex items-center justify-center shadow-lg cursor-pointer transition-all duration-300 hover:scale-110"
+        className="fixed bottom-24 right-6 z-50 w-14 h-14 bg-white border-2 border-gray-800 rounded-full flex items-center justify-center shadow-lg cursor-pointer transition-all duration-300 hover:scale-110"
         aria-label="Abrir chat"
       >
         {isOpen ? (
-          <X className="w-6 h-6 text-white" />
+          <X className="w-6 h-6 text-gray-800" />
         ) : (
-          <MessageCircle className="w-6 h-6 text-white" />
+          <MessageCircle className="w-6 h-6 text-gray-800" />
         )}
       </button>
 

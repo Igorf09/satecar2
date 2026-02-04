@@ -11,7 +11,6 @@ import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import ChatbotWidget from "@/components/ChatbotWidget";
-import SegundaViaFloat from "@/components/SegundaViaFloat";
 
 const Index = () => {
   return (
@@ -30,7 +29,6 @@ const Index = () => {
       </main>
       <Footer />
       <WhatsAppFloat />
-      <SegundaViaFloat />
       <ChatbotWidget />
     </div>
   );
