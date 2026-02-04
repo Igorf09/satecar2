@@ -44,33 +44,6 @@ const plans: Plan[] = [
     period: "mensal",
   },
   {
-    name: "Plano Plus",
-    subtitle: "Serviço de Rastreamento + Bloqueador + Assistência Veicular 24h",
-    features: [
-      { text: "Monitoramento", included: true },
-      { text: "Aplicativo para celular (Android e iOS)", included: true },
-      { text: "Central 0800 (Suporte a Sinistro)", included: true },
-      { text: "Alerta de carro ligado", included: true },
-      { text: "Alerta de cerca virtual", included: true },
-      { text: "Alerta Velocidade", included: true },
-      { text: "Controle de manutenção de veículo", included: true },
-      { text: "Cobertura Nacional", included: true },
-      { text: "Bloqueador Inteligente", included: true },
-      { text: "Chaveiro", included: true },
-      { text: "6 Reboques até 100 KM", included: true },
-      { text: "1 Recarga de Bateria", included: true },
-      { text: "1 Troca de Pneu", included: true },
-      { text: "Meio de Transporte Alternativo", included: true },
-      { text: "Hospedagem", included: true },
-      { text: "Remoção inter-hospitalar", included: true },
-      { text: "Translado Do Corpo", included: true },
-      { text: "Carro Reserva 7 Dias", included: true },
-      { text: "Seguro Morte Acidental R$3.000,00", included: true },
-    ],
-    price: "R$99,90",
-    period: "mensal",
-  },
-  {
     name: "Plano Block",
     subtitle: "Serviço de Rastreamento + Central 24 horas",
     features: [
@@ -95,6 +68,33 @@ const plans: Plan[] = [
       { text: "Seguro Morte Acidental R$3.000,00", included: false },
     ],
     price: "R$59,90",
+    period: "mensal",
+  },
+  {
+    name: "Plano Plus",
+    subtitle: "Serviço de Rastreamento + Bloqueador + Assistência Veicular 24h",
+    features: [
+      { text: "Monitoramento", included: true },
+      { text: "Aplicativo para celular (Android e iOS)", included: true },
+      { text: "Central 0800 (Suporte a Sinistro)", included: true },
+      { text: "Alerta de carro ligado", included: true },
+      { text: "Alerta de cerca virtual", included: true },
+      { text: "Alerta Velocidade", included: true },
+      { text: "Controle de manutenção de veículo", included: true },
+      { text: "Cobertura Nacional", included: true },
+      { text: "Bloqueador Inteligente", included: true },
+      { text: "Chaveiro", included: true },
+      { text: "6 Reboques até 100 KM", included: true },
+      { text: "1 Recarga de Bateria", included: true },
+      { text: "1 Troca de Pneu", included: true },
+      { text: "Meio de Transporte Alternativo", included: true },
+      { text: "Hospedagem", included: true },
+      { text: "Remoção inter-hospitalar", included: true },
+      { text: "Translado Do Corpo", included: true },
+      { text: "Carro Reserva 7 Dias", included: true },
+      { text: "Seguro Morte Acidental R$3.000,00", included: true },
+    ],
+    price: "R$99,90",
     period: "mensal",
   },
 ];
@@ -159,19 +159,19 @@ const PlansSection = () => {
           {plans.map((plan, index) => (
             <div 
               key={index} 
-              className={`plan-card flex flex-col transition-all duration-700 ${index === 1 ? 'lg:-mt-4 lg:mb-4' : ''} ${
+              className={`plan-card flex flex-col transition-all duration-700 ${index === 2 ? 'lg:-mt-4 lg:mb-4' : ''} ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
               }`}
               style={{
                 transitionDelay: `${index * 200}ms`,
-                ...(index === 1 ? {
+                ...(index === 2 ? {
                   border: '1px solid hsl(195 85% 52% / 0.4)',
                   boxShadow: '0 30px 60px -20px hsl(215 60% 5% / 0.6), 0 0 50px -15px hsl(195 85% 52% / 0.2)'
                 } : {})
               }}
             >
               {/* Highlight badge for Plus plan */}
-              {index === 1 && (
+              {index === 2 && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider"
                   style={{
                     background: 'linear-gradient(135deg, hsl(195 85% 52%) 0%, hsl(200 90% 48%) 100%)',
