@@ -8,7 +8,7 @@ const SegundaViaFloat = () => {
       href={SEGUNDA_VIA_LINK}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-40 right-6 z-50 flex items-center gap-2 bg-blue-accent text-white px-4 py-3 rounded-full shadow-lg cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-xl"
+      className="fixed bottom-40 right-6 z-50 flex items-center gap-2 bg-primary text-primary-foreground px-4 py-3 rounded-full shadow-lg cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-xl"
       aria-label="Solicitar segunda via"
     >
       <FileText className="w-5 h-5" />
