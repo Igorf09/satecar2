@@ -155,11 +155,11 @@ const PlansSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 max-w-6xl mx-auto pt-6">
           {plans.map((plan, index) => (
             <div 
               key={index} 
-              className={`plan-card flex flex-col transition-all duration-700 ${index === 2 ? 'lg:-mt-4 lg:mb-4' : ''} ${
+              className={`plan-card flex flex-col transition-all duration-700 overflow-visible ${index === 2 ? 'lg:-mt-4 lg:mb-4' : ''} ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
               }`}
               style={{
