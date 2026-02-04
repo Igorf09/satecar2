@@ -1,26 +1,25 @@
 import { useEffect, useRef, useState } from "react";
-import { DollarSign, Headphones, Truck, Wrench } from "lucide-react";
+import benefitCost from "@/assets/benefit-cost.jpg";
+import benefitSupport from "@/assets/benefit-support.jpg";
+import benefitFleet from "@/assets/benefit-fleet.jpg";
+import benefitInstall from "@/assets/benefit-install.jpg";
 
 const benefits = [
   { 
-    icon: DollarSign, 
-    title: "Custo Acessível",
-    description: "Planos que cabem no seu bolso"
+    image: benefitCost,
+    title: "CUSTO\nACESSÍVEL",
   },
   { 
-    icon: Headphones, 
-    title: "Assistência 24 Horas",
-    description: "Suporte sempre disponível"
+    image: benefitSupport,
+    title: "ASSISTÊNCIA\n24 HORAS",
   },
   { 
-    icon: Truck, 
-    title: "Monitoramento de Frotas",
-    description: "Controle total da sua frota"
+    image: benefitFleet,
+    title: "MONITORAMENTO\nDE FROTAS",
   },
   { 
-    icon: Wrench, 
-    title: "Instalação Simplificada",
-    description: "Rápida e sem complicações"
+    image: benefitInstall,
+    title: "INSTALAÇÃO\nSIMPLIFICADA",
   },
 ];
 
@@ -59,25 +58,16 @@ const BenefitsSection = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <h2 
-          className={`text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 text-foreground transition-all duration-700 ${
+          className={`text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-16 text-foreground transition-all duration-700 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
           Vantagens de Adquirir um<br />
           <span className="text-primary">rastreador para seu veículo</span>
         </h2>
-        
-        <p 
-          className={`text-muted-foreground text-center max-w-2xl mx-auto mb-16 text-lg transition-all duration-700 delay-100 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
-        >
-          Descubra porque a Satecar é a escolha certa para proteger seu patrimônio
-        </p>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div className="grid sm:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
           {benefits.map((benefit, index) => {
-            const Icon = benefit.icon;
             return (
               <div
                 key={index}
@@ -86,30 +76,40 @@ const BenefitsSection = () => {
                 }`}
                 style={{ transitionDelay: `${150 + index * 100}ms` }}
               >
-                {/* Card */}
-                <div className="relative h-full bg-gradient-to-br from-muted/80 via-muted/60 to-muted/40 backdrop-blur-xl rounded-3xl p-8 border border-primary/10 shadow-lg hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
-                  {/* Glow effect on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
+                {/* Card with background image */}
+                <div className="relative h-56 md:h-64 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02]">
+                  {/* Background Image */}
+                  <img 
+                    src={benefit.image} 
+                    alt={benefit.title.replace('\n', ' ')}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
                   
-                  {/* Icon container */}
-                  <div className="relative mb-6">
-                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center shadow-lg shadow-primary/25 group-hover:scale-110 transition-transform duration-500">
-                      <Icon className="w-8 h-8 text-primary-foreground" strokeWidth={2} />
-                    </div>
-                    {/* Decorative ring */}
-                    <div className="absolute -inset-2 rounded-2xl border border-primary/20 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" />
-                  </div>
+                  {/* Dark blue overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#0f172a]/80 via-[#1e3a5f]/70 to-[#0f172a]/85" />
+                  
+                  {/* Additional gradient for depth */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/60 via-transparent to-transparent" />
 
                   {/* Content */}
-                  <h3 className="relative text-xl md:text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
-                    {benefit.title}
-                  </h3>
-                  <p className="relative text-muted-foreground text-sm md:text-base leading-relaxed">
-                    {benefit.description}
-                  </p>
+                  <div className="absolute inset-0 flex items-center justify-between p-8 md:p-10">
+                    {/* Title */}
+                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight whitespace-pre-line drop-shadow-lg">
+                      {benefit.title}
+                    </h3>
+                    
+                    {/* Satecar Logo */}
+                    <div className="flex-shrink-0 opacity-40 group-hover:opacity-60 transition-opacity duration-500">
+                      <img 
+                        src="/images/logo-satecar.png" 
+                        alt="Satecar"
+                        className="h-12 md:h-16 w-auto brightness-0 invert"
+                      />
+                    </div>
+                  </div>
 
-                  {/* Bottom accent line */}
-                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  {/* Border glow on hover */}
+                  <div className="absolute inset-0 rounded-3xl border-2 border-primary/0 group-hover:border-primary/30 transition-all duration-500" />
                 </div>
               </div>
             );
