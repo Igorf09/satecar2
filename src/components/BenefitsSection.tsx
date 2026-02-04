@@ -92,18 +92,18 @@ const BenefitsSection = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/60 via-transparent to-transparent" />
 
                   {/* Content */}
-                  <div className="absolute inset-0 flex items-center justify-between p-8 md:p-10">
+                  <div className="absolute inset-0 flex items-center justify-between p-6 md:p-8">
                     {/* Title */}
-                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight whitespace-pre-line drop-shadow-lg">
+                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight whitespace-pre-line drop-shadow-lg flex-1">
                       {benefit.title}
                     </h3>
                     
                     {/* Satecar Logo */}
-                    <div className="flex-shrink-0 opacity-40 group-hover:opacity-60 transition-opacity duration-500">
+                    <div className="flex-shrink-0 ml-4 opacity-40 group-hover:opacity-60 transition-opacity duration-500">
                       <img 
                         src="/images/logo-satecar.png" 
                         alt="Satecar"
-                        className="h-12 md:h-16 w-auto brightness-0 invert"
+                        className="h-10 md:h-12 w-auto brightness-0 invert object-contain"
                       />
                     </div>
                   </div>
