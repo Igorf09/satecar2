@@ -2,14 +2,15 @@ name: Build Vite site
 
 on:
   push:
-    branches:  [ "main", "principal" ]
+    branches: ["main", "principal"]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Setup Node
         uses: actions/setup-node@v4
