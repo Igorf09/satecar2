@@ -2,7 +2,7 @@ name: Build Vite site
 
 on:
   push:
-    branches: [ "principal" ]
+    branches:  [ "main", "principal" ]
 
 jobs:
   build:
